@@ -3,9 +3,10 @@
  */
 
 // Site configuration
-export const SITE_URL = 'https://mldangelo.com';
-export const AUTHOR_NAME = "Michael D'Angelo";
-export const TWITTER_HANDLE = '@dangelosaurus';
+export const SITE_URL =
+  'https://andrusenko-aleksey.github.io/founder-personal-site';
+export const AUTHOR_NAME = 'Oleksii Andrusenko';
+export const TWITTER_HANDLE = '@andrusenko_ua';
 
 // Image dimension constants
 export const AVATAR_SIZE = {
