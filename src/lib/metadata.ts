@@ -13,7 +13,7 @@ export function createPageMetadata({
   description,
   path,
 }: PageMetadataOptions): Metadata {
-  const absoluteUrl = path ? new URL(path, SITE_URL).toString() : undefined;
+  const absoluteUrl = path ? `${SITE_URL}${path}` : undefined;
   const pageTitle = `${title} | ${AUTHOR_NAME}`;
 
   return {
