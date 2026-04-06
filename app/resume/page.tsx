@@ -16,7 +16,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'Resume',
   description:
-    "Michael D'Angelo's Resume. OpenAI, Promptfoo, Smile ID, Arthena, Matroid, Stanford ICME, YC alum.",
+    "Oleksii Andrusenko's Resume. Founder & CEO at Growpad.pro. Previously at Looksery (Snap Inc.), Preply, and MacPaw. Kyiv Polytechnic Institute.",
   path: '/resume/',
 });
 
@@ -27,12 +27,12 @@ export default function ResumePage() {
         <header className="resume-header">
           <h1 className="resume-title">Resume</h1>
           <p className="resume-summary">
-            Engineering leader with 15+ years building products across AI,
-            security, and infrastructure. Currently Member of the Technical
-            Staff at OpenAI, where I work on Promptfoo and agent security.
-            Previously co-founded Promptfoo, built it into an AI security
-            platform, and sold it to OpenAI. Stanford MS, YC alum, previously VP
-            Engineering.
+            Founder & CEO with 10+ years building products and growing companies
+            across B2B SaaS, marketplace, and consumer tech. Currently building
+            Growpad.pro, a sales automation platform for growth teams.
+            Previously held senior product and growth roles at Looksery
+            (acquired by Snap), Preply, and MacPaw. Kyiv Polytechnic Institute
+            graduate.
           </p>
         </header>
 

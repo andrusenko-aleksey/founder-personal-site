@@ -1,96 +1,64 @@
 export const aboutMarkdown = `# Intro
 
-I build products, companies, and teams across AI, security, and infrastructure. Today, I am a Member of the Technical Staff at [OpenAI](https://openai.com), where I work on [Promptfoo](https://promptfoo.dev) and agent security.
+I build products that help companies grow. Today, I am the Founder & CEO of [Growpad.pro](https://growpad.pro), a B2B SaaS platform that helps startups and growing teams automate outreach, manage their pipeline, and close deals faster.
 
-Previously, I co-founded [Promptfoo](https://promptfoo.dev), [Arthena](https://arthena.com) (acquired by Masterworks), and [Matroid](https://matroid.com). I also led engineering at [Smile ID](https://usesmileid.com) and helped build satellites at [Planet](https://planet.com) and [Planetary Resources](https://en.wikipedia.org/wiki/Planetary_Resources).
+Before starting Growpad, I spent nearly a decade in product and growth roles at companies like [Looksery](https://snap.com) (acquired by Snap Inc.), [Preply](https://preply.com), and [MacPaw](https://macpaw.com). I've worked on products used by tens of millions of people, and I've learned that the best products are built by deeply understanding the people who use them.
 
-In my spare time, I enjoy investing in people and ideas through a [small venture fund](https://skepticalinvestments.biz), focusing on projects with high social impact. If you think I can be helpful to you or your cause, or if you're interested in collaborating, feel free to get in touch.
+I'm based in Ukraine, and I'm proud to be part of the resilient, fast-growing Ukrainian tech ecosystem. If you're building something ambitious, feel free to reach out.
 
 # Some History
 
-- My parents put a computer in my bedroom in 1993 when I was 3. It was an old Tandy that ran MS-DOS. My favorite games were Street Rod 2, Wolfenstein 3D, and Tom and Jerry. It had a mechanical keyboard and a turbo button. To this day, I still don't know what pressing the turbo button really did.
-- We subscribed to AOL in 1995. I still remember installing it from a floppy disk onto our brand-new Packard Bell. It took years for me to send my first email.
-- In the summer of 1996, my uncle purchased [MegaRace](https://en.wikipedia.org/wiki/MegaRace) from [Media Play](https://en.wikipedia.org/wiki/Media_Play) and installed it on my mom's work computer. I might have endangered her business by using her computer too much.
-- At 7, I discovered the mini-games hidden in Microsoft Office. I also beat Minesweeper on expert for the first time.
-- At 8, my parents bought me a Sony Mavica MVC-FD71 digital camera after I stole their SLR one too many times. It could fit 10 images to a floppy disk at a 0.3MP resolution. I still have it, and it still works. I've been taking photographs ever since, now with a Nikon D750, D800, and occasionally with a Mamiya 6II.
-- At 10, I built my first website with Microsoft FrontPage on our Pentium III [Gateway](https://en.wikipedia.org/wiki/Gateway,_Inc.). My website was terrible.
-- I was 11 when I built my first [Tesla Coil](https://en.wikipedia.org/wiki/Tesla_coil) (without my parents' permission). Over the next few years, I built several more, including one of the first audio modulated coils and one of the first DRSSTCs.
-- When I was 12, I set the all-time high record at my local laser tag facility by reverse engineering the charging station and weapon protocols with a photo-resistor, micro-cassette recorder, and a lot of patience. I was unstoppable.
-- At 13, I went to space camp and fell in love. I went back two more times and promised myself that I'd work in space. I've since helped build three generations of satellites and have contributed to two more.
-- At 14, I was almost expelled for finding a backdoor into my high school's file server and telling everyone but the faculty members about it. Later that year, I figured out how to turn off the internet firewall by editing system registry keys. I anonymously shared my work months later.
-- At 16, I participated in a foreign exchange program in Dortmund, Germany. Since then, I've gone back almost every year.
-- 14 - 17, I played a lot of video games. My favorites included Counter-Strike Source, Command and Conquer 3, Halo 2, and Age of Empires II.
-- At 18, in the summer before college, my friends and I started playing [Muggle Quidditch](<https://en.wikipedia.org/wiki/Quidditch_(sport)>). We went on to start over 8 teams in the [International Quidditch Association](https://en.wikipedia.org/wiki/International_Quidditch_Association), including the [Buffalo Quidditch Society](https://www.facebook.com/buffaloquidditch/). At our height, we were ranked third in the IQA. Although I don't play anymore, you can still see pictures of me holding a broom while wearing a chess camp t-shirt on Facebook.
-- At 19, I took my first graduate course and published my first academic paper.
-- At 20, I co-authored a grant to build a satellite and managed a 60+ person team for the next two years. You can read more about [that project](https://ubnl.space/glados/).
+- My parents got our first home computer in 1998. It ran Windows 95 and I thought it was magic. My first game was a pirated copy of Prince of Persia.
+- By 10, I was spending every free hour on the internet, exploring forums, early Flash games, and anything with HTML that I could take apart.
+- At 13, I built my first website using GeoCities. It was a fan site for my favorite football club. It had a GIF of a spinning football and approximately seven visitors — all of them me.
+- At 16, I got serious about programming. I learned Pascal in school and spent nights teaching myself HTML, CSS, and a little PHP to make dynamic pages.
+- I studied Computer Science at Kyiv Polytechnic Institute, where I got my first real taste of building things that worked — and a lot of practice fixing things that didn't.
+- My first job after university was in digital marketing, because the startup I wanted to join couldn't afford a full-time engineer and needed someone who could do everything. I learned more in that first year than in four years of university.
+- In 2015, I joined Preply as a PM and fell in love with growth experimentation. We ran hundreds of A/B tests, and I became obsessed with conversion optimization, onboarding, and monetization.
+- In 2018, I joined Looksery (by then part of Snap Inc.) to lead product for the AR Camera SDK. Building software that touched billions of Snaps per day was humbling and exciting in equal measure.
+- In 2022, after years of imagining it, I finally started Growpad. The first version was rough. The second version was less rough. We're on version four now and people actually pay for it.
 
-Ask me in person for other stories that I'm afraid to share with the internet.
+Ask me in person about the part where we almost ran out of runway and what we did about it.
 
 # I Like
 
-- Running.
-- Skiing.
-- Sailing and the sea.
-- Space.
-- Summer.
-- [Books](https://www.goodreads.com/mdangelo).
-- Colored pencils ([Faber-Castell Polychromos](https://www.faber-castell.com/products/art-and-graphic/polychromos)).
-- Podcasts ([The Daily](https://www.nytimes.com/column/the-daily), [The Ezra Klein Show](https://www.nytimes.com/column/ezra-klein-podcast), [Planet Money](https://www.npr.org/sections/money/), [Dwarkesh Podcast](https://www.dwarkesh.com/about/), [The a16z Show](https://a16z.com/podcasts/a16z-podcast/), [The MAD Podcast with Matt Turck](https://firstmark.com/community/the-mad-podcast/), [Uncapped with Jack Altman](https://podcasts.apple.com/us/podcast/uncapped-with-jack-altman/id1801867202), [Darknet Diaries](https://darknetdiaries.com/), and others).
-- [Good design](/).
-- [Photography](https://instagram.com/dangelosaurus).
+- Building things that solve real problems.
+- Talking to customers — even the ones who are unhappy.
+- Strong coffee and weak tea.
+- Football (the European kind).
+- Strategy games: Civilization, Total War, anything with a tech tree.
+- Long walks with headphones and a good podcast.
+- Books on psychology, behavioral economics, and history.
+- Watching Ukrainian startups punch above their weight.
 
 # Travel / Geography
 
-- I am originally from Buffalo, New York. I have since lived in Palo Alto, Mountain View, San Francisco, Seattle, and New York City.
-- I've been to approximately 50 countries, some of which I have forgotten, many of which I would like to revisit.
-- In 2016, I visited Canada, Ethiopia, Austria, Germany, Belgium, Ireland, Northern Ireland, Italy, Romania, Sweden, Norway, Svalbard, Panama, Costa Rica, Uganda, Japan, and the UAE, mostly in that order.
-- In 2017, I visited Canada, Japan, Denmark, Germany, Sweden, Estonia, Russia, the Netherlands, Belgium, the UK, Spain, Iceland, France, Switzerland, Ethiopia, and Luxembourg.
-- In 2018, I visited Canada, France, Italy, Israel, and the UK.
-- In 2019, I visited Canada, the UK, France, and Switzerland.
-- In 2020, I traveled barely 20 blocks. I stayed in New York and remodeled an apartment.
-- In 2021, I continued remodeling an apartment.
-- In 2022, I switched jobs and visited the UK, France, Greece, Belgium, Luxembourg, Germany, and Kenya.
-- In 2023, I visited France, the UK, Ireland, and Rwanda.
-- I am an Oregon Trail II enthusiast.
+- I grew up in Kyiv, Ukraine, and I still call it home even though I've spent time in Warsaw, Berlin, Lisbon, and beyond.
+- I've visited about 20 countries, mostly for work or conferences, but a few for pure adventure.
+- My favorite travel moments are the ones where something goes wrong and you have to improvise.
+- If I could live anywhere for a year, it would probably be Lisbon or somewhere in Southeast Asia.
 
 # Fun Facts
 
-- I have a list of thousands of ideas, like creating matching bow ties for cats and humans.
-- I almost always have a sketchbook with me and a [01 Sakura Pigma Micron Pen](https://www.sakuraofamerica.com/product/pigma-micron/).
-- I can't locate every country on a map.
-- I operate a [small angel fund](http://skepticalinvestments.biz/) with terrible returns.
-- I break about 30 traffic laws on a skateboard or [bicycle](https://www.citibikenyc.com/) every single day.
-- I stack-rank coffee shops, restaurants, and every dog I see in New York.
-- I added this page because many people complained that my site was just my resume.
+- I once did a live demo at a product conference where the API went down mid-presentation. I improvised with a static mockup for 12 minutes and nobody noticed.
+- I keep a running list of "problems worth solving." It currently has 73 entries.
+- I can type 90+ words per minute but I still hunt-and-peck on my phone.
+- My first successful growth hack was sending hand-written thank-you notes to our first 50 customers. Half of them upgraded to annual plans.
+- I genuinely enjoy writing pitch decks. I know that makes me unusual.
 
 # I Dream Of
 
-- Inspiring and feeling inspired.
-- Enabling a brighter future for everyone, regardless of political or socioeconomic status.
-- Treating every individual with genuine kindness and respect.
-- Staying curious.
-- Continually improving.
-- You not checking the commit history for earlier drafts of this file.
+- Building a product that outlasts me.
+- A Ukrainian startup ecosystem that becomes a global reference point.
+- Founders in emerging markets having the same access to capital and community as founders in Silicon Valley.
+- Staying curious and hungry no matter how many years go by.
+- Making things that make people's work a little easier, a little more human.
 
 # Websites from People I Admire
 
-- [Alex Peysakhovich](http://alexpeys.github.io/)
-- [Chris Lengerich](http://www.chrislengerich.com/)
-- [Chris Saad](https://www.chrissaad.com/)
-- [Duncan Tomlin](http://duncantomlin.com/)
-- [Ed Kearney](https://edkearney.com/)
-- [Gia Jung](http://giajung.com/)
-- [Hawley Moore](http://hawleymoore.com/)
-- [Holman Gao](https://golmansax.com/)
-- [Ian Webster](http://ianww.com/)
-- [Johanna Flato](https://www.johannaflato.com/)
-- [Judy Mou](http://www.judymou.com/)
-- [Judy Suh](https://www.judysuh.com/)
-- [Kristina Monakhova](https://kristinamonakhova.com/)
-- [Noah Trueblood](http://notrueblood.com/)
-- [Ruoxi Wang](http://ruoxiw.com/)
-- [Tom Sachs](https://www.tomsachs.org/)
-- [Will Holley](https://willholley.com/)
-
-If we are friends and you feel like you belong on this list, you're probably right. Submit a PR, or ask me, and I'll add you.
+- [Paul Graham](http://paulgraham.com/)
+- [Alexis Ohanian](https://alexisohanian.com/)
+- [Naval Ravikant](https://nav.al/)
+- [Patrick McKenzie](https://www.kalzumeus.com/)
+- [Rand Fishkin](https://moz.com/rand/)
 `;

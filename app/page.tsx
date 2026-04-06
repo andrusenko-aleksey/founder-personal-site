@@ -6,7 +6,7 @@ import PageWrapper from '@/components/Template/PageWrapper';
 
 export const metadata: Metadata = {
   description:
-    'Member of the Technical Staff at OpenAI, working on Promptfoo and agent security. Previously co-founded Promptfoo, Arthena, and Matroid, and led engineering at Smile ID.',
+    'Founder & CEO at Growpad.pro — building B2B SaaS tools for startup growth. Entrepreneur, product builder, and growth hacker based in Ukraine.',
 };
 
 export default function HomePage() {

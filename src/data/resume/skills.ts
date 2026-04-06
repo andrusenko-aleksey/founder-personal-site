@@ -12,115 +12,104 @@ export interface Category {
 }
 
 const skills: Skill[] = [
-  // Languages
+  // Product & Strategy
   {
-    title: 'Python',
+    title: 'Product Strategy',
     competency: 5,
-    category: ['Languages', 'ML Engineering'],
+    category: ['Product'],
   },
+  {
+    title: 'Roadmap Planning',
+    competency: 5,
+    category: ['Product'],
+  },
+  {
+    title: 'User Research',
+    competency: 4,
+    category: ['Product'],
+  },
+  {
+    title: 'A/B Testing',
+    competency: 5,
+    category: ['Product', 'Growth'],
+  },
+  // Growth & Marketing
+  {
+    title: 'Growth Hacking',
+    competency: 5,
+    category: ['Growth'],
+  },
+  {
+    title: 'B2B Sales',
+    competency: 4,
+    category: ['Growth'],
+  },
+  {
+    title: 'Email Marketing',
+    competency: 5,
+    category: ['Growth', 'Marketing'],
+  },
+  {
+    title: 'SEO / Content',
+    competency: 4,
+    category: ['Marketing'],
+  },
+  {
+    title: 'Paid Acquisition',
+    competency: 4,
+    category: ['Marketing'],
+  },
+  // Engineering & Tech
   {
     title: 'TypeScript',
-    competency: 5,
-    category: ['Languages', 'Web Development'],
-  },
-  {
-    title: 'SQL',
     competency: 4,
-    category: ['Languages', 'Databases'],
-  },
-  // AI & LLM
-  {
-    title: 'AI Agents',
-    competency: 5,
-    category: ['ML Engineering'],
+    category: ['Engineering'],
   },
   {
-    title: 'LLM Evaluation',
-    competency: 5,
-    category: ['ML Engineering'],
+    title: 'Node.js',
+    competency: 4,
+    category: ['Engineering'],
   },
   {
-    title: 'AI Red-teaming',
-    competency: 5,
-    category: ['ML Engineering'],
+    title: 'React / Next.js',
+    competency: 3,
+    category: ['Engineering'],
+  },
+  {
+    title: 'PostgreSQL',
+    competency: 4,
+    category: ['Engineering'],
   },
   {
     title: 'LLM APIs',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'RAG',
     competency: 4,
-    category: ['ML Engineering'],
+    category: ['Engineering', 'AI'],
   },
   {
     title: 'Prompt Engineering',
     competency: 4,
-    category: ['ML Engineering'],
+    category: ['AI'],
   },
+  // Leadership & Operations
   {
-    title: 'Vector Databases',
-    competency: 4,
-    category: ['ML Engineering', 'Databases'],
-  },
-  {
-    title: 'PyTorch',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Pandas',
+    title: 'Team Building',
     competency: 5,
-    category: ['ML Engineering', 'Data Engineering'],
-  },
-  // Web Development
-  {
-    title: 'Node.js',
-    competency: 5,
-    category: ['Web Development'],
+    category: ['Leadership'],
   },
   {
-    title: 'FastAPI',
+    title: 'Fundraising',
     competency: 4,
-    category: ['Web Development'],
+    category: ['Leadership'],
   },
   {
-    title: 'Next.js',
-    competency: 3,
-    category: ['Web Development'],
-  },
-  // Databases
-  {
-    title: 'PostgreSQL',
+    title: 'Hiring & Culture',
     competency: 4,
-    category: ['Databases'],
+    category: ['Leadership'],
   },
   {
-    title: 'Redis',
-    competency: 3,
-    category: ['Databases'],
-  },
-  // Infrastructure
-  {
-    title: 'AWS',
+    title: 'OKR / KPI Design',
     competency: 4,
-    category: ['Infrastructure'],
-  },
-  {
-    title: 'Docker',
-    competency: 4,
-    category: ['Infrastructure'],
-  },
-  {
-    title: 'Kubernetes',
-    competency: 3,
-    category: ['Infrastructure'],
-  },
-  {
-    title: 'Observability',
-    competency: 4,
-    category: ['Infrastructure', 'ML Engineering'],
+    category: ['Leadership', 'Product'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 

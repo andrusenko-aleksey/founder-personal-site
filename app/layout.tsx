@@ -27,7 +27,7 @@ const raleway = Raleway({
 });
 
 const siteDescription =
-  'Member of the Technical Staff at OpenAI, working on Promptfoo and agent security. Previously co-founded Promptfoo, Arthena, and Matroid, and led engineering at Smile ID.';
+  'Founder & CEO at Growpad.pro — building B2B SaaS tools for startup growth. Entrepreneur, product builder, and growth hacker based in Ukraine.';
 
 export const metadata: Metadata = {
   title: {
@@ -37,13 +37,14 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     AUTHOR_NAME,
-    'OpenAI',
-    'Promptfoo',
-    'agent security',
-    'LLM security',
-    'machine learning',
+    'Growpad',
+    'Growpad.pro',
     'startup founder',
-    'YC',
+    'SaaS',
+    'B2B',
+    'growth hacking',
+    'entrepreneur',
+    'Ukraine',
   ],
   authors: [{ name: AUTHOR_NAME }],
   creator: AUTHOR_NAME,
