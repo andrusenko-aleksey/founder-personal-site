@@ -1,17 +1,8 @@
-import { act, render } from '@testing-library/react';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import data from '../../stats/personal';
 
 describe('personal stats data', () => {
-  beforeEach(() => {
-    vi.useFakeTimers();
-  });
-
-  afterEach(() => {
-    vi.useRealTimers();
-  });
-
   it('exports an array of stats', () => {
     expect(Array.isArray(data)).toBe(true);
     expect(data.length).toBeGreaterThan(0);
@@ -25,21 +16,47 @@ describe('personal stats data', () => {
     }
   });
 
-  it('has an age stat with a React component', () => {
-    const ageStat = data.find((s) => s.key === 'age');
-
-    expect(ageStat).toBeDefined();
-    expect(ageStat!.label).toBe('Current age');
-    // Age value is a React element
-    expect(ageStat!.value).toBeDefined();
+  it('has the expected stat keys in order', () => {
+    expect(data.map((s) => s.key)).toEqual([
+      'experience',
+      'companies',
+      'reviews',
+      'agencies',
+      'location',
+    ]);
   });
 
-  it('has a countries visited stat', () => {
-    const countriesStat = data.find((s) => s.key === 'countries');
+  it('has a years of experience stat', () => {
+    const experienceStat = data.find((s) => s.key === 'experience');
 
-    expect(countriesStat).toBeDefined();
-    expect(countriesStat!.label).toBe('Countries visited');
-    expect(countriesStat!.value).toBe(22);
+    expect(experienceStat).toBeDefined();
+    expect(experienceStat!.label).toBe('Years in SEO and growth marketing');
+    expect(experienceStat!.value).toBe('16+');
+  });
+
+  it('has a companies helped stat', () => {
+    const companiesStat = data.find((s) => s.key === 'companies');
+
+    expect(companiesStat).toBeDefined();
+    expect(companiesStat!.label).toBe('SaaS and B2B tech companies helped');
+    expect(companiesStat!.value).toBe('50+');
+  });
+
+  it('has a Clutch reviews stat with a link', () => {
+    const reviewsStat = data.find((s) => s.key === 'reviews');
+
+    expect(reviewsStat).toBeDefined();
+    expect(reviewsStat!.label).toBe('Five-star reviews on Clutch');
+    expect(reviewsStat!.value).toBe('37+');
+    expect(reviewsStat!.link).toBe('https://clutch.co/profile/growpad');
+  });
+
+  it('has an agencies led stat', () => {
+    const agenciesStat = data.find((s) => s.key === 'agencies');
+
+    expect(agenciesStat).toBeDefined();
+    expect(agenciesStat!.label).toBe('Marketing agencies led');
+    expect(agenciesStat!.value).toBe(2);
   });
 
   it('has a current location stat', () => {
@@ -47,22 +64,6 @@ describe('personal stats data', () => {
 
     expect(locationStat).toBeDefined();
     expect(locationStat!.label).toBe('Current city');
-    expect(locationStat!.value).toBe('Kyiv, Ukraine');
-  });
-
-  it('Age component renders and updates', () => {
-    const ageStat = data.find((s) => s.key === 'age');
-    const AgeComponent = () => <>{ageStat!.value}</>;
-
-    render(<AgeComponent />);
-
-    // Advance timer to trigger age calculation
-    act(() => {
-      vi.advanceTimersByTime(50);
-    });
-
-    // The age should be a number with decimal places
-    const textContent = document.body.textContent || '';
-    expect(textContent).toMatch(/\d+\.\d+/);
+    expect(locationStat!.value).toBe('Alicante, Spain');
   });
 });

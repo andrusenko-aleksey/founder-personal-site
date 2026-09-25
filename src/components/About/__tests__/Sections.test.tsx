@@ -42,11 +42,11 @@ Hello from the intro.
 
 Lead paragraph.
 
-# I Like
+# Mission
 
-- Running
+Help founders grow.
 
-# Websites from People I Admire
+# Elsewhere
 
 - [Example](https://example.com)`}
       />,
@@ -111,10 +111,10 @@ Lead paragraph.
       <AboutContent markdown={aboutMarkdown} />,
     );
 
-    expect(html).toContain('href="#some-history"');
-    expect(html).toContain('id="some-history"');
-    expect(html).toContain('href="#travel-geography"');
-    expect(html).toContain('id="travel-geography"');
+    expect(html).toContain('href="#my-story"');
+    expect(html).toContain('id="my-story"');
+    expect(html).toContain('href="#what-i-work-on"');
+    expect(html).toContain('id="what-i-work-on"');
   });
 
   it('supports same-page hash navigation from section links', async () => {
@@ -124,30 +124,30 @@ Lead paragraph.
 
     const nav = screen.getByRole('navigation', { name: 'About sections' });
     const navLink = within(nav).getByRole('link', {
-      name: 'Travel / Geography',
+      name: 'What I Work On',
     });
 
     navLink.click();
 
     await waitFor(() => {
-      expect(window.location.hash).toBe('#travel-geography');
+      expect(window.location.hash).toBe('#what-i-work-on');
     });
     expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'Travel / Geography',
+      'What I Work On',
     );
 
-    const heading = screen.getByRole('heading', { name: 'Fun Facts' });
+    const heading = screen.getByRole('heading', { name: 'Mission' });
     const permalink = within(heading).getByRole('link', {
-      name: 'Fun Facts',
+      name: 'Mission',
     });
 
     permalink.click();
 
     await waitFor(() => {
-      expect(window.location.hash).toBe('#fun-facts');
+      expect(window.location.hash).toBe('#mission');
     });
     expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'Fun Facts',
+      'Mission',
     );
   });
 });

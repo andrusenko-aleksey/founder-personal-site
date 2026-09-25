@@ -12,104 +12,90 @@ export interface Category {
 }
 
 const skills: Skill[] = [
-  // Product & Strategy
   {
-    title: 'Product Strategy',
+    title: 'SaaS SEO',
     competency: 5,
-    category: ['Product'],
+    category: ['SEO'],
   },
   {
-    title: 'Roadmap Planning',
+    title: 'Technical SEO Audits',
     competency: 5,
-    category: ['Product'],
+    category: ['SEO'],
   },
   {
-    title: 'User Research',
+    title: 'Link Building',
+    competency: 5,
+    category: ['SEO'],
+  },
+  {
+    title: 'Keyword & Content Architecture',
+    competency: 5,
+    category: ['SEO', 'Content'],
+  },
+  {
+    title: 'LLMO',
+    competency: 5,
+    category: ['AI Search'],
+  },
+  {
+    title: 'GEO / AEO',
+    competency: 5,
+    category: ['AI Search'],
+  },
+  {
+    title: 'Google AI Overviews',
     competency: 4,
-    category: ['Product'],
+    category: ['AI Search'],
   },
   {
-    title: 'A/B Testing',
+    title: 'AI-Optimized Content',
     competency: 5,
-    category: ['Product', 'Growth'],
+    category: ['AI Search', 'Content'],
   },
-  // Growth & Marketing
   {
-    title: 'Growth Hacking',
+    title: 'Content Strategy',
+    competency: 5,
+    category: ['Content'],
+  },
+  {
+    title: 'B2B Content Marketing',
+    competency: 5,
+    category: ['Content'],
+  },
+  {
+    title: 'Inbound Marketing',
     competency: 5,
     category: ['Growth'],
   },
   {
-    title: 'B2B Sales',
+    title: 'Organic Pipeline & MQL/SQL Growth',
+    competency: 5,
+    category: ['Growth'],
+  },
+  {
+    title: 'Go-to-Market for EU & US',
     competency: 4,
     category: ['Growth'],
   },
   {
-    title: 'Email Marketing',
+    title: 'Agency Leadership',
     competency: 5,
-    category: ['Growth', 'Marketing'],
+    category: ['Leadership'],
   },
   {
-    title: 'SEO / Content',
-    competency: 4,
-    category: ['Marketing'],
+    title: 'Client Strategy',
+    competency: 5,
+    category: ['Leadership'],
   },
   {
-    title: 'Paid Acquisition',
-    competency: 4,
-    category: ['Marketing'],
+    title: 'Business Development',
+    competency: 5,
+    category: ['Leadership'],
   },
-  // Engineering & Tech
-  {
-    title: 'TypeScript',
-    competency: 4,
-    category: ['Engineering'],
-  },
-  {
-    title: 'Node.js',
-    competency: 4,
-    category: ['Engineering'],
-  },
-  {
-    title: 'React / Next.js',
-    competency: 3,
-    category: ['Engineering'],
-  },
-  {
-    title: 'PostgreSQL',
-    competency: 4,
-    category: ['Engineering'],
-  },
-  {
-    title: 'LLM APIs',
-    competency: 4,
-    category: ['Engineering', 'AI'],
-  },
-  {
-    title: 'Prompt Engineering',
-    competency: 4,
-    category: ['AI'],
-  },
-  // Leadership & Operations
   {
     title: 'Team Building',
-    competency: 5,
-    category: ['Leadership'],
-  },
-  {
-    title: 'Fundraising',
     competency: 4,
     category: ['Leadership'],
-  },
-  {
-    title: 'Hiring & Culture',
-    competency: 4,
-    category: ['Leadership'],
-  },
-  {
-    title: 'OKR / KPI Design',
-    competency: 4,
-    category: ['Leadership', 'Product'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 

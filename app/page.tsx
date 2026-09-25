@@ -6,7 +6,7 @@ import PageWrapper from '@/components/Template/PageWrapper';
 
 export const metadata: Metadata = {
   description:
-    'Founder & CEO at Growpad.pro — building B2B SaaS tools for startup growth. Entrepreneur, product builder, and growth hacker based in Ukraine.',
+    'Founder & CEO of GrowPad, an SEO and AI-visibility agency for SaaS and B2B tech. 16+ years in SEO, content and LLMO, helping 50+ tech teams grow organic pipeline.',
 };
 
 export default function HomePage() {

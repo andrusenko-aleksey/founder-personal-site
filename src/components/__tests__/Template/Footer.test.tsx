@@ -15,9 +15,7 @@ describe('Footer', () => {
     render(<Footer />);
 
     expect(screen.getByText('Oleksii Andrusenko')).toBeInTheDocument();
-    expect(
-      screen.getByText('Founder & CEO at Growpad.pro'),
-    ).toBeInTheDocument();
+    expect(screen.getByText('Founder & CEO at GrowPad')).toBeInTheDocument();
   });
 
   it('displays the current year in copyright', () => {

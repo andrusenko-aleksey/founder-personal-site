@@ -29,7 +29,7 @@ describe('EmailLink', () => {
   it('renders the email domain', () => {
     render(<EmailLink />);
 
-    expect(screen.getByText('@mldangelo.com')).toBeInTheDocument();
+    expect(screen.getByText('@growpad.pro')).toBeInTheDocument();
   });
 
   it('renders as a link element', () => {
@@ -122,13 +122,18 @@ describe('EmailLink', () => {
   it('generates valid mailto href for valid email prefixes', () => {
     render(<EmailLink />);
 
-    // Advance time to get a valid email prefix
+    const link = screen.getByRole('link');
+    // Before any characters are typed, the default 'hi' prefix is used
+    expect(link.getAttribute('href')).toBe('mailto:hi@growpad.pro');
+
+    // Advance time to fully type out the 'oleksii' message
     act(() => {
-      vi.advanceTimersByTime(150); // Type out 'hi'
+      vi.advanceTimersByTime(400);
     });
 
-    const link = screen.getByRole('link');
-    expect(link.getAttribute('href')).toBe('mailto:hi@mldangelo.com');
+    expect(screen.getByRole('link').getAttribute('href')).toBe(
+      'mailto:oleksii@growpad.pro',
+    );
   });
 
   it('has invalid class when email prefix is invalid', async () => {

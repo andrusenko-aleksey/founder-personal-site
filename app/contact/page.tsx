@@ -8,7 +8,8 @@ import { createPageMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Contact',
-  description: "Contact Michael D'Angelo via email @ hi@mldangelo.com",
+  description:
+    'Contact Oleksii Andrusenko, founder of GrowPad, about SaaS SEO, LLMO and inbound growth.',
   path: '/contact/',
 });
 

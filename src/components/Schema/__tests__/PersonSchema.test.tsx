@@ -72,7 +72,8 @@ describe('PersonSchema', () => {
 
     expect(data.worksFor).toBeDefined();
     expect(data.worksFor['@type']).toBe('Organization');
-    expect(data.worksFor.name).toBe('Growpad.pro');
+    expect(data.worksFor.name).toBe('GrowPad');
+    expect(data.worksFor.url).toBe('https://growpad.pro');
   });
 
   it('uses current role as job title', () => {

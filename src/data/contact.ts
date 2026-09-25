@@ -1,4 +1,5 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
@@ -12,19 +13,24 @@ export interface ContactItem {
 
 const data: ContactItem[] = [
   {
-    link: 'https://www.linkedin.com/in/andrusenko-aleksey',
+    link: 'https://www.linkedin.com/in/oleksiiandrusenko/',
     label: 'LinkedIn',
     icon: faLinkedinIn,
+  },
+  {
+    link: 'https://twitter.com/shiversok',
+    label: 'X',
+    icon: faTwitter,
+  },
+  {
+    link: 'https://www.facebook.com/alexey.andrusenko',
+    label: 'Facebook',
+    icon: faFacebookF,
   },
   {
     link: 'https://github.com/andrusenko-aleksey',
     label: 'Github',
     icon: faGithub,
-  },
-  {
-    link: 'https://x.com/andrusenko_ua',
-    label: 'X',
-    icon: faTwitter,
   },
   {
     link: 'mailto:oleksii@growpad.pro',
