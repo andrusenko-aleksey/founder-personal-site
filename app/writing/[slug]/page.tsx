@@ -7,12 +7,18 @@ import PageWrapper from '@/components/Template/PageWrapper';
 import { getPostBySlug, getPostSlugs } from '@/lib/posts';
 import { AUTHOR_NAME, formatDate, SITE_URL } from '@/lib/utils';
 
+const EMPTY_POSTS_PLACEHOLDER = 'no-posts';
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   const slugs = getPostSlugs();
+  // Static export rejects an empty list, so emit a placeholder that renders 404.
+  if (slugs.length === 0) {
+    return [{ slug: EMPTY_POSTS_PLACEHOLDER }];
+  }
   return slugs.map((slug) => ({ slug }));
 }
 
