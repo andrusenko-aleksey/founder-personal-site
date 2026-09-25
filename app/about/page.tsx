@@ -8,7 +8,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'About',
   description:
-    'Learn about Oleksii Andrusenko — Founder & CEO of Growpad.pro, entrepreneur, and product builder from Ukraine.',
+    'Learn about Oleksii Andrusenko, founder and CEO of GrowPad, and 16+ years of SEO, content and AI-search growth for SaaS and tech.',
   path: '/about/',
 });
 

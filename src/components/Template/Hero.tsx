@@ -15,19 +15,19 @@ export default function Hero() {
         </h1>
 
         <p className="hero-tagline">
-          Founder &amp; CEO at{' '}
+          Founder &amp; CEO of{' '}
           <a href="https://growpad.pro" className="hero-highlight">
-            Growpad.pro
+            GrowPad
           </a>
-          , building B2B SaaS tools that help startups grow faster.
+          , an SEO and AI-visibility agency for SaaS and B2B tech companies.
           <br />
-          Entrepreneur, product builder, and growth practitioner from Ukraine.
+          16+ years turning organic search and LLMs into predictable pipeline.
         </p>
 
         <div className="hero-chips">
-          <span className="hero-chip">Founder &amp; CEO</span>
-          <span className="hero-chip">B2B SaaS</span>
-          <span className="hero-chip">Growth &amp; Product</span>
+          <span className="hero-chip">16+ years in SEO</span>
+          <span className="hero-chip">50+ SaaS &amp; tech teams grown</span>
+          <span className="hero-chip">37+ five-star Clutch reviews</span>
         </div>
 
         <div className="hero-cta">

@@ -21,7 +21,7 @@ describe('Hero', () => {
   it('renders the tagline with Growpad link', () => {
     render(<Hero />);
 
-    const growpadLink = screen.getByRole('link', { name: /growpad\.pro/i });
+    const growpadLink = screen.getByRole('link', { name: /^growpad$/i });
     expect(growpadLink).toHaveAttribute('href', 'https://growpad.pro');
     expect(growpadLink).toHaveClass('hero-highlight');
   });
@@ -29,9 +29,12 @@ describe('Hero', () => {
   it('displays hero chips for credentials', () => {
     render(<Hero />);
 
-    expect(screen.getByText('Founder & CEO')).toBeInTheDocument();
-    expect(screen.getByText('B2B SaaS')).toBeInTheDocument();
-    expect(screen.getByText('Growth & Product')).toBeInTheDocument();
+    expect(screen.getByText('16+ years in SEO')).toBeInTheDocument();
+    expect(screen.getByText('50+ SaaS & tech teams grown')).toBeInTheDocument();
+    expect(
+      screen.getByText('37+ five-star Clutch reviews'),
+    ).toBeInTheDocument();
+    expect(document.querySelectorAll('.hero-chip')).toHaveLength(3);
   });
 
   it('renders CTA buttons with correct links', () => {

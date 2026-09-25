@@ -10,35 +10,50 @@ describe('about data', () => {
 
   it('contains the intro section', () => {
     expect(aboutMarkdown).toContain('# Intro');
-    expect(aboutMarkdown).toContain('Growpad.pro');
+    expect(aboutMarkdown).toContain('Oleksii Andrusenko');
+    expect(aboutMarkdown).toContain('[GrowPad](https://growpad.pro)');
   });
 
-  it('contains the history section', () => {
-    expect(aboutMarkdown).toContain('# Some History');
-    expect(aboutMarkdown).toContain('Windows 95');
+  it('contains the story section', () => {
+    expect(aboutMarkdown).toContain('# My Story');
+    expect(aboutMarkdown).toContain('[Livepage](https://livepage.net)');
+    expect(aboutMarkdown).toContain('Alicante, Spain');
   });
 
-  it('contains the likes section', () => {
-    expect(aboutMarkdown).toContain('# I Like');
-    expect(aboutMarkdown).toContain('Football');
+  it('contains the what I work on section', () => {
+    expect(aboutMarkdown).toContain('# What I Work On');
+    expect(aboutMarkdown).toContain('AI search visibility');
   });
 
-  it('contains the travel section', () => {
-    expect(aboutMarkdown).toContain('# Travel / Geography');
-    expect(aboutMarkdown).toContain('Kyiv');
+  it('contains the how we work section', () => {
+    expect(aboutMarkdown).toContain('# How We Work');
+    expect(aboutMarkdown).toContain('qualified pipeline');
   });
 
-  it('contains the fun facts section', () => {
-    expect(aboutMarkdown).toContain('# Fun Facts');
+  it('contains the mission section', () => {
+    expect(aboutMarkdown).toContain('# Mission');
+    expect(aboutMarkdown).toContain('10,000 Ukrainian IT and SaaS founders');
   });
 
-  it('contains the dreams section', () => {
-    expect(aboutMarkdown).toContain('# I Dream Of');
-    expect(aboutMarkdown).toContain('Staying curious');
+  it('contains the elsewhere section', () => {
+    expect(aboutMarkdown).toContain('# Elsewhere');
+    expect(aboutMarkdown).toContain('https://clutch.co/profile/growpad');
   });
 
-  it('contains the admired websites section', () => {
-    expect(aboutMarkdown).toContain('# Websites from People I Admire');
+  it('has sections in the expected order', () => {
+    const headings = Array.from(
+      aboutMarkdown.matchAll(/^# (.+)$/gm),
+      (match) => match[1],
+    );
+
+    expect(headings).toEqual([
+      'Intro',
+      'My Story',
+      'What I Work On',
+      'How We Work',
+      'Mission',
+      'Elsewhere',
+    ]);
   });
 
   it('contains valid markdown links', () => {

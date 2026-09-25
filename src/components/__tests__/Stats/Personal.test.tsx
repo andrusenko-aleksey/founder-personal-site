@@ -1,56 +1,45 @@
-import { act, render, screen } from '@testing-library/react';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 
 import Personal from '../../Stats/Personal';
 
 describe('Personal', () => {
-  beforeEach(() => {
-    vi.useFakeTimers();
-  });
-
-  afterEach(() => {
-    vi.useRealTimers();
-  });
-
   it('renders the personal stats table', () => {
     render(<Personal />);
 
     expect(screen.getByRole('table')).toBeInTheDocument();
   });
 
-  it('displays the current age label', () => {
+  it('displays years of experience', () => {
     render(<Personal />);
 
-    expect(screen.getByText('Current age')).toBeInTheDocument();
+    expect(
+      screen.getByText('Years in SEO and growth marketing'),
+    ).toBeInTheDocument();
+    expect(screen.getByText('16+')).toBeInTheDocument();
   });
 
-  it('displays countries visited', () => {
+  it('displays Clutch reviews linked to the Clutch profile', () => {
     render(<Personal />);
 
-    expect(screen.getByText('Countries visited')).toBeInTheDocument();
-    expect(screen.getByText('22')).toBeInTheDocument();
+    expect(screen.getByText('Five-star reviews on Clutch')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: '37+' })).toHaveAttribute(
+      'href',
+      'https://clutch.co/profile/growpad',
+    );
   });
 
   it('displays current city', () => {
     render(<Personal />);
 
     expect(screen.getByText('Current city')).toBeInTheDocument();
-    expect(screen.getByText('Kyiv, Ukraine')).toBeInTheDocument();
+    expect(screen.getByText('Alicante, Spain')).toBeInTheDocument();
   });
 
-  it('updates age over time', async () => {
+  it('renders one row per stat', () => {
     render(<Personal />);
 
-    // Get initial age text
-    const ageCell = screen.getByText('Current age').closest('tr');
-    expect(ageCell).toBeInTheDocument();
-
-    // Advance timer to trigger age update
-    act(() => {
-      vi.advanceTimersByTime(50);
-    });
-
-    // Age should still be displayed (value changes but component renders)
-    expect(screen.getByText('Current age')).toBeInTheDocument();
+    const body = document.querySelector('.stat-table tbody');
+    expect(body?.querySelectorAll('tr')).toHaveLength(5);
   });
 });

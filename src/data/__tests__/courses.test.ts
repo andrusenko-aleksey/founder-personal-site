@@ -4,8 +4,8 @@ import courses from '../resume/courses';
 
 describe('courses data', () => {
   it('exports an array of courses', () => {
+    // The Courses section was removed from the resume, so an empty list is valid
     expect(Array.isArray(courses)).toBe(true);
-    expect(courses.length).toBeGreaterThan(0);
   });
 
   it('each course has required properties', () => {

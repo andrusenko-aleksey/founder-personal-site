@@ -27,7 +27,7 @@ const raleway = Raleway({
 });
 
 const siteDescription =
-  'Founder & CEO at Growpad.pro — building B2B SaaS tools for startup growth. Entrepreneur, product builder, and growth hacker based in Ukraine.';
+  'Founder & CEO of GrowPad, an SEO and AI-visibility agency for SaaS and B2B tech. 16+ years in SEO, content and LLMO, helping 50+ tech teams grow organic pipeline.';
 
 export const metadata: Metadata = {
   title: {
@@ -37,14 +37,15 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     AUTHOR_NAME,
-    'Growpad',
-    'Growpad.pro',
-    'startup founder',
-    'SaaS',
-    'B2B',
-    'growth hacking',
-    'entrepreneur',
-    'Ukraine',
+    'GrowPad',
+    'SaaS SEO',
+    'B2B tech SEO',
+    'LLMO',
+    'GEO',
+    'AEO',
+    'AI search optimization',
+    'inbound marketing',
+    'content marketing',
   ],
   authors: [{ name: AUTHOR_NAME }],
   creator: AUTHOR_NAME,
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: '/images/me.jpg',
+        url: '/images/og.jpg',
         width: 1200,
         height: 630,
         alt: AUTHOR_NAME,
@@ -71,7 +72,7 @@ export const metadata: Metadata = {
     creator: TWITTER_HANDLE,
     title: AUTHOR_NAME,
     description: siteDescription,
-    images: ['/images/me.jpg'],
+    images: ['/images/og.jpg'],
   },
   robots: {
     index: true,

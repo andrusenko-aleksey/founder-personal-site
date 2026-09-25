@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /api
 
-Sitemap: https://mldangelo.com/sitemap.xml
+Sitemap: https://andrusenko-aleksey.github.io/founder-personal-site/sitemap.xml

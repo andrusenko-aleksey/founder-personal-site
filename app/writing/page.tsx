@@ -4,13 +4,13 @@ import PageWrapper from '@/components/Template/PageWrapper';
 import writing from '@/data/writing';
 import { createPageMetadata } from '@/lib/metadata';
 import { getAllPosts } from '@/lib/posts';
-import { formatDate } from '@/lib/utils';
+import { formatDate, withBasePath } from '@/lib/utils';
 
 export const metadata: Metadata = {
   ...createPageMetadata({
     title: 'Writing',
     description:
-      'Articles on AI security, LLM red teaming, and trust & safety.',
+      'Research and articles on SaaS SEO, LLMO, GEO and inbound marketing by Oleksii Andrusenko.',
     path: '/writing/',
   }),
   alternates: {
@@ -103,7 +103,7 @@ export default function WritingPage() {
           <div className="writing-header-row">
             <h1 className="page-title">Writing</h1>
             <a
-              href="/feed.xml"
+              href={withBasePath('/feed.xml')}
               className="writing-rss-link"
               title="RSS Feed"
               aria-label="RSS Feed"
