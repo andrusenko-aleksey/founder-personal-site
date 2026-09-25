@@ -1,3 +1,5 @@
+import { withBasePath } from '@/lib/utils';
+
 interface ThemePortraitProps {
   width: number;
   height: number;
@@ -22,7 +24,7 @@ export default function ThemePortrait({
     <span className={`theme-portrait ${className}`}>
       {/* biome-ignore lint/performance/noImgElement: Using native img to avoid next/image runtime overhead for static export */}
       <img
-        src="/images/me.jpg"
+        src={withBasePath('/images/me.jpg')}
         alt="Oleksii Andrusenko"
         width={width}
         height={height}

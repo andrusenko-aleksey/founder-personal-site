@@ -4,6 +4,9 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   output: 'export',
 
+  // Set in the Pages deploy workflow; empty for local dev and CI builds.
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? '',
+
   // Allow dev server access from local network (mobile testing, etc.)
   allowedDevOrigins: ['http://192.168.*.*:3000'],
 
