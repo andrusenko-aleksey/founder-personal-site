@@ -118,17 +118,17 @@ const skills: Skill[] = [
  * Uses CSS custom properties defined in tailwind.css for runtime styling,
  * with textColor pre-computed from the hex values for accessibility.
  *
- * Hex values from tailwind.css @theme block:
- * --color-skill-1: #6968b3, --color-skill-2: #37b1f5, --color-skill-3: #40494e
- * --color-skill-4: #515dd4, --color-skill-5: #e47272, --color-skill-6: #cc7b94
+ * Hex values from app/styles/tokens/colors.css (GrowPad brand palette):
+ * --color-skill-1: #23139d, --color-skill-2: #0051f3, --color-skill-3: #4bd8f9
+ * --color-skill-4: #ffa300, --color-skill-5: #ff7d64, --color-skill-6: #142b4d
  */
 const CATEGORY_COLORS: { color: string; textColor: 'dark' | 'light' }[] = [
-  { color: 'var(--color-skill-1)', textColor: 'light' }, // #6968b3 - dark bg
-  { color: 'var(--color-skill-2)', textColor: 'dark' }, // #37b1f5 - light bg
-  { color: 'var(--color-skill-3)', textColor: 'light' }, // #40494e - dark bg
-  { color: 'var(--color-skill-4)', textColor: 'light' }, // #515dd4 - dark bg
-  { color: 'var(--color-skill-5)', textColor: 'dark' }, // #e47272 - light bg
-  { color: 'var(--color-skill-6)', textColor: 'dark' }, // #cc7b94 - light bg
+  { color: 'var(--color-skill-1)', textColor: 'light' }, // #23139d indigo
+  { color: 'var(--color-skill-2)', textColor: 'light' }, // #0051f3 blue
+  { color: 'var(--color-skill-3)', textColor: 'dark' }, // #4bd8f9 cyan
+  { color: 'var(--color-skill-4)', textColor: 'dark' }, // #ffa300 amber
+  { color: 'var(--color-skill-5)', textColor: 'dark' }, // #ff7d64 coral
+  { color: 'var(--color-skill-6)', textColor: 'light' }, // #142b4d navy
 ];
 
 // Fallback colors for categories beyond the predefined set (with pre-computed contrast)

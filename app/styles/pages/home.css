@@ -373,14 +373,14 @@
   box-shadow:
     var(--shadow-xl),
     0 0 0 1px var(--color-border),
-    0 0 40px rgba(96, 165, 250, 0.08);
+    0 0 40px var(--color-accent-subtle);
 }
 
 [data-theme='dark'] .hero-avatar:hover {
   box-shadow:
     var(--shadow-xl),
     0 0 0 1px var(--color-accent-border),
-    0 0 50px rgba(96, 165, 250, 0.12);
+    0 0 50px var(--color-accent-glow);
 }
 
 [data-theme='dark'] .hero-chip {

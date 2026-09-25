@@ -1,7 +1,8 @@
 /* ========================================
    COLOR TOKENS
    Core color palette and semantic colors
-   Growpad.pro brand — green growth palette
+   GrowPad brand: indigo #23139D, blue #0051F3, cyan #4BD8F9,
+   amber #FFA300, coral #FF7D64, navy #142B4D
    ======================================== */
 
 @theme {
@@ -9,19 +10,18 @@
      CORE PALETTE
      =================== */
   --color-bg: #ffffff;
-  --color-bg-alt: #f4faf6;
-  --color-bg-offset: #edf7f0;
-  --color-fg: #1a2e1e;
-  --color-fg-bold: #0f1f12;
-  --color-fg-light: #4a6b52;
+  --color-bg-alt: #f6f5fc;
+  --color-bg-offset: #eeecf9;
+  --color-fg: #142b4d;
+  --color-fg-bold: #0d1a33;
+  --color-fg-light: #4a5572;
 
   /* ===================
      ACCENT COLORS
-     Growpad primary: #16a34a (green-600)
      =================== */
-  --color-accent: #16a34a;
-  --color-accent-secondary: #4ade80;
-  --color-accent-hover: #15803d;
+  --color-accent: #23139d;
+  --color-accent-secondary: #0051f3;
+  --color-accent-hover: #0051f3;
   --color-accent-light: color-mix(in srgb, var(--color-accent) 12%, transparent);
   --color-accent-subtle: color-mix(in srgb, var(--color-accent) 5%, transparent);
   --color-accent-muted: color-mix(in srgb, var(--color-accent) 3%, transparent);
@@ -33,29 +33,29 @@
   /* ===================
      SKILL CATEGORY COLORS
      =================== */
-  --color-skill-1: #16a34a;
-  --color-skill-2: #0891b2;
-  --color-skill-3: #7c3aed;
-  --color-skill-4: #ea580c;
-  --color-skill-5: #0f766e;
-  --color-skill-6: #be185d;
+  --color-skill-1: #23139d;
+  --color-skill-2: #0051f3;
+  --color-skill-3: #4bd8f9;
+  --color-skill-4: #ffa300;
+  --color-skill-5: #ff7d64;
+  --color-skill-6: #142b4d;
 
   /* ===================
      BORDER COLORS
      =================== */
-  --color-border: rgba(22, 163, 74, 0.12);
-  --color-border-bg: rgba(22, 163, 74, 0.07);
-  --color-border-alt: rgba(22, 163, 74, 0.2);
+  --color-border: rgba(35, 19, 157, 0.1);
+  --color-border-bg: rgba(35, 19, 157, 0.06);
+  --color-border-alt: rgba(35, 19, 157, 0.16);
 
   /* ===================
      SURFACE TOKENS
      =================== */
-  --color-surface-subtle: rgba(22, 163, 74, 0.03);
-  --color-surface-hover: rgba(22, 163, 74, 0.07);
-  --color-surface-active: rgba(22, 163, 74, 0.12);
-  --color-text-muted: rgba(26, 46, 30, 0.5);
-  --color-text-dim: rgba(26, 46, 30, 0.6);
-  --color-fg-muted: rgba(26, 46, 30, 0.5);
+  --color-surface-subtle: rgba(35, 19, 157, 0.03);
+  --color-surface-hover: rgba(35, 19, 157, 0.06);
+  --color-surface-active: rgba(35, 19, 157, 0.1);
+  --color-text-muted: rgba(20, 43, 77, 0.55);
+  --color-text-dim: rgba(20, 43, 77, 0.65);
+  --color-fg-muted: rgba(20, 43, 77, 0.55);
 
   /* ===================
      SEMANTIC COLORS
