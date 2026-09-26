@@ -37,16 +37,24 @@ describe('Hero', () => {
     expect(document.querySelectorAll('.hero-chip')).toHaveLength(3);
   });
 
-  it('renders CTA buttons with correct links', () => {
+  it('renders a jump button for every section', () => {
     render(<Hero />);
 
-    const aboutButton = screen.getByRole('link', { name: /about me/i });
-    expect(aboutButton).toHaveAttribute('href', '/about');
+    const aboutButton = screen.getByRole('link', { name: 'About Me' });
+    expect(aboutButton).toHaveAttribute('href', '#about');
     expect(aboutButton).toHaveClass('button-primary');
 
-    const resumeButton = screen.getByRole('link', { name: /view resume/i });
-    expect(resumeButton).toHaveAttribute('href', '/resume');
-    expect(resumeButton).toHaveClass('button-secondary');
+    for (const [label, href] of [
+      ['Experience', '#experience'],
+      ['Skills', '#skills'],
+      ['Projects', '#projects'],
+      ['Writing', '#writing'],
+      ['Contact', '#contact'],
+    ]) {
+      const button = screen.getByRole('link', { name: label });
+      expect(button).toHaveAttribute('href', href);
+      expect(button).toHaveClass('button-secondary');
+    }
   });
 
   it('has decorative background elements', () => {

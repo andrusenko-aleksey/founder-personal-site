@@ -5,11 +5,11 @@ import { SITE_URL } from '@/lib/utils';
 import { GET } from '../route';
 
 describe('feed.xml route', () => {
-  it('contains the writing index link', async () => {
+  it('links the channel to the writing section', async () => {
     const response = await GET();
     const xml = await response.text();
 
-    expect(xml).toContain(`${SITE_URL}/writing/`);
+    expect(xml).toContain(`<link>${SITE_URL}/#writing</link>`);
   });
 
   it('keeps the feed self link file-like', async () => {

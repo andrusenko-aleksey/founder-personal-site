@@ -7,7 +7,7 @@ export default function References() {
       <p className="text-sm text-[var(--color-fg-light)] text-center">
         References available upon request.{' '}
         <Link
-          href="/contact"
+          href="/#contact"
           className="font-medium text-[var(--color-accent)] hover:text-[var(--color-fg-bold)] transition-colors duration-150"
         >
           Get in touch →

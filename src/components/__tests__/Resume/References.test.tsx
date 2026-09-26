@@ -12,13 +12,13 @@ describe('References', () => {
     ).toBeInTheDocument();
   });
 
-  it('has a link to the contact page', () => {
+  it('links to the contact section', () => {
     render(<References />);
 
     const link = screen.getByRole('link', {
       name: /get in touch/i,
     });
-    expect(link).toHaveAttribute('href', '/contact');
+    expect(link).toHaveAttribute('href', '/#contact');
   });
 
   it('has an anchor for navigation', () => {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import routes from '../routes';
+import routes, { sectionRoutes } from '../routes';
 
 describe('routes', () => {
   it('exports an array of routes', () => {
@@ -36,11 +36,21 @@ describe('routes', () => {
   it('contains expected navigation routes', () => {
     const paths = routes.map((r) => r.path);
 
-    expect(paths).toContain('/');
-    expect(paths).toContain('/about');
-    expect(paths).toContain('/resume');
-    expect(paths).toContain('/projects');
-    expect(paths).toContain('/contact');
+    expect(paths).toEqual([
+      '/',
+      '/#about',
+      '/#experience',
+      '/#skills',
+      '/#projects',
+      '/#writing',
+      '/#contact',
+    ]);
+  });
+
+  it('points each section route at its section id', () => {
+    for (const route of sectionRoutes) {
+      expect(route.path).toBe(`/#${route.sectionId}`);
+    }
   });
 
   it('has unique paths', () => {

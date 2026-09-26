@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { render, screen, waitFor } from '@testing-library/react';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import Navigation from '../../Template/Navigation';
 
@@ -9,7 +9,20 @@ vi.mock('next/navigation', () => ({
   usePathname: () => mockPathname(),
 }));
 
+function placeSection(id: string, top: number) {
+  const el = document.createElement('div');
+  el.id = id;
+  el.getBoundingClientRect = () => ({ top }) as DOMRect;
+  document.body.appendChild(el);
+}
+
 describe('Navigation', () => {
+  afterEach(() => {
+    for (const id of ['about', 'experience', 'skills']) {
+      document.getElementById(id)?.remove();
+    }
+  });
+
   beforeEach(() => {
     mockPathname.mockReturnValue('/');
 
@@ -35,45 +48,53 @@ describe('Navigation', () => {
     expect(logo).toHaveAttribute('href', '/');
   });
 
-  it('renders navigation links for all non-index routes', () => {
+  it('renders a link to every home page section', () => {
     render(<Navigation />);
 
-    // Should have links for About, Resume, Writing, Stats, Contact, Projects
-    expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /projects/i })).toHaveAttribute(
-      'href',
-      '/projects',
+    for (const [label, href] of [
+      ['About', '/#about'],
+      ['Experience', '/#experience'],
+      ['Skills', '/#skills'],
+      ['Projects', '/#projects'],
+      ['Writing', '/#writing'],
+      ['Contact', '/#contact'],
+    ]) {
+      expect(screen.getByRole('link', { name: label })).toHaveAttribute(
+        'href',
+        href,
+      );
+    }
+    expect(screen.queryByRole('link', { name: /stats/i })).toBeNull();
+  });
+
+  it('highlights the section that has scrolled past the top of the view', async () => {
+    placeSection('about', -500);
+    placeSection('experience', 100);
+    placeSection('skills', 900);
+
+    render(<Navigation />);
+
+    const experience = screen.getByRole('link', { name: 'Experience' });
+    await waitFor(() => expect(experience).toHaveClass('active'));
+    expect(experience).toHaveAttribute('aria-current', 'location');
+    expect(screen.getByRole('link', { name: 'About' })).not.toHaveClass(
+      'active',
     );
-    expect(screen.getByRole('link', { name: /writing/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /stats/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /contact/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Skills' })).not.toHaveClass(
+      'active',
+    );
   });
 
-  it('marks home route as active when on homepage', () => {
-    mockPathname.mockReturnValue('/');
+  it('does not highlight sections on other pages', async () => {
+    mockPathname.mockReturnValue('/writing/some-post');
+    placeSection('about', -500);
+
     render(<Navigation />);
 
-    // About link should not be active
-    const aboutLink = screen.getByRole('link', { name: /about/i });
-    expect(aboutLink).not.toHaveClass('active');
-  });
-
-  it('marks about route as active when on about page', () => {
-    mockPathname.mockReturnValue('/about');
-    render(<Navigation />);
-
-    const aboutLink = screen.getByRole('link', { name: /about/i });
-    expect(aboutLink).toHaveClass('active');
-    expect(aboutLink).toHaveAttribute('aria-current', 'page');
-  });
-
-  it('marks nested routes as active', () => {
-    mockPathname.mockReturnValue('/resume/skills');
-    render(<Navigation />);
-
-    const resumeLink = screen.getByRole('link', { name: /resume/i });
-    expect(resumeLink).toHaveClass('active');
+    await new Promise((resolve) => requestAnimationFrame(resolve));
+    expect(screen.getByRole('link', { name: 'About' })).not.toHaveClass(
+      'active',
+    );
   });
 
   it('renders theme toggle and hamburger menu', () => {
