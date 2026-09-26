@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { sectionRoutes } from '@/data/routes';
 
 import ThemePortrait from './ThemePortrait';
 
@@ -30,14 +30,17 @@ export default function Hero() {
           <span className="hero-chip">37+ five-star Clutch reviews</span>
         </div>
 
-        <div className="hero-cta">
-          <Link href="/about" className="button button-primary">
-            About Me
-          </Link>
-          <Link href="/resume" className="button button-secondary">
-            View Resume
-          </Link>
-        </div>
+        <nav className="hero-cta" aria-label="Jump to section">
+          {sectionRoutes.map((route, i) => (
+            <a
+              key={route.sectionId}
+              href={`#${route.sectionId}`}
+              className={`button ${i === 0 ? 'button-primary' : 'button-secondary'}`}
+            >
+              {i === 0 ? 'About Me' : route.label}
+            </a>
+          ))}
+        </nav>
       </div>
 
       <div className="hero-bg" aria-hidden="true">

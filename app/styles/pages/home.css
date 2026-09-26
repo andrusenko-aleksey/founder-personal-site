@@ -366,6 +366,48 @@
 }
 
 /* ========================================
+   ONE-PAGE SECTIONS
+   ======================================== */
+
+.page-main--onepage {
+  max-width: 64rem;
+  padding-top: 0;
+}
+
+.onepage-section {
+  position: relative;
+  padding: 4.5rem 0 1rem;
+  scroll-margin-top: var(--header-height);
+}
+
+.onepage-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  border-radius: 1px;
+}
+
+.hero-cta .button {
+  min-width: 8.5rem;
+}
+
+@media (max-width: 736px) {
+  .onepage-section {
+    padding-top: 3rem;
+    scroll-margin-top: var(--header-height-mobile);
+  }
+
+  .hero-cta .button {
+    min-width: 0;
+  }
+}
+
+/* ========================================
    DARK MODE
    ======================================== */
 

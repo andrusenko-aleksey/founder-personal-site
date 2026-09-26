@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import ContactIcons from '@/components/Contact/ContactIcons';
 import work from '@/data/resume/work';
+import { sectionRoutes } from '@/data/routes';
 
 import ThemePortrait from './ThemePortrait';
 
@@ -37,10 +38,11 @@ export default function Footer() {
               Explore
             </h4>
             <div className="footer-links-grid">
-              <Link href="/about">About</Link>
-              <Link href="/resume">Resume</Link>
-              <Link href="/projects">Projects</Link>
-              <Link href="/contact">Contact</Link>
+              {sectionRoutes.map((route) => (
+                <Link key={route.path} href={route.path}>
+                  {route.label}
+                </Link>
+              ))}
             </div>
           </nav>
 

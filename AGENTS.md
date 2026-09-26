@@ -73,12 +73,14 @@ Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Biome ·
 - **Theming**: `data-theme` attribute on `<html>`, persisted to `window.localStorage` in client code/tests to avoid Node runtime globals leaking into browser-only paths
 - **Static export**: `output: 'export'` for GitHub Pages—no server features
 - **Canonical/export URLs**: When generating absolute URLs for metadata, RSS, sitemap, or schema, match `trailingSlash: true` output (`/about/`, `/writing/post-slug/`) instead of non-canonical no-slash variants; file-like routes such as `/feed.xml` and `/sitemap.xml` stay file-like
+- **One-page layout**: `app/page.tsx` stacks the hero and the section components in `src/components/Sections/` (About, Resume, Projects, Writing, Contact). Section ids and nav labels live in `src/data/routes.ts`; header, footer, mobile menu and hero jump buttons all read from `sectionRoutes`, and `useActiveSection` highlights the section in view. Add a section by creating its component, giving it `id` + `className="onepage-section"`, and adding a route entry. Only `/writing/[slug]` posts remain as separate pages
+- **GitHub Pages base path**: The site is served from `/founder-personal-site`; the deploy workflow passes it as `NEXT_PUBLIC_BASE_PATH`. `<Link>` and `_next` assets are prefixed automatically, but raw `<img>`/`<a>` paths must go through `withBasePath()`
 - **Page metadata**: Route-level `metadata` exports and `generateMetadata` should override `openGraph` and `twitter`, not just `title`/`description`, otherwise subpages inherit the homepage share card from `app/layout.tsx`; for `app/not-found.tsx`, omit `openGraph.url` because there is no stable canonical 404 route in the static export
 - **Theme images**: Use `ThemePortrait` component for light/dark variants
 - **Profile copy**: Keep role/bio updates in sync across `src/components/Template/Hero.tsx`, `app/layout.tsx` metadata, `src/data/about.ts`, and `src/data/resume/work.ts` so homepage copy, SEO, schema, and resume stay aligned
 - **Long-form markdown pages**: Prefer a dedicated renderer component that can parse markdown into semantic sections instead of styling raw headings globally; if `markdown-to-jsx` causes dev/runtime issues in App Router, a `'use client'` boundary may still be required even without hooks. Preserve stable heading ids when converting markdown headings so deep links and `scroll-margin-top` behavior keep working, prefer a shared helper over duplicating slug logic in each page component, and expose those anchors in the UI with section nav or self-links if readers are expected to use them
 - **Blog posts**: Markdown files in `content/writing/` with frontmatter (title, date, description); slug derived from filename
-- **Writing page**: Add external links in `src/data/writing.ts` and keep dated entries sorted newest first; local posts still live in `content/writing/`
+- **Writing section**: Add external links in `src/data/writing.ts` and keep dated entries sorted newest first; local posts still live in `content/writing/`
 
 ## Testing
 

@@ -3,18 +3,18 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import routes from '@/data/routes';
+import { sectionRoutes } from '@/data/routes';
+import { useActiveSection } from '@/hooks/useActiveSection';
 
 import Hamburger from './Hamburger';
 import ThemeToggle from './ThemeToggle';
 
+const sectionIds = sectionRoutes.map((r) => r.sectionId as string);
+
 export default function Navigation() {
   const pathname = usePathname();
-
-  const isActive = (path: string) => {
-    if (path === '/') return pathname === '/';
-    return pathname?.startsWith(path);
-  };
+  const activeSection = useActiveSection(sectionIds);
+  const onHome = pathname === '/';
 
   return (
     <header className="site-header">
@@ -23,18 +23,19 @@ export default function Navigation() {
       </Link>
 
       <nav className="nav-links">
-        {routes
-          .filter((l) => !l.index)
-          .map((l) => (
+        {sectionRoutes.map((l) => {
+          const active = onHome && activeSection === l.sectionId;
+          return (
             <Link
               key={l.label}
               href={l.path}
-              className={`nav-link ${isActive(l.path) ? 'active' : ''}`}
-              aria-current={isActive(l.path) ? 'page' : undefined}
+              className={`nav-link ${active ? 'active' : ''}`}
+              aria-current={active ? 'location' : undefined}
             >
               {l.label}
             </Link>
-          ))}
+          );
+        })}
       </nav>
 
       <div className="nav-actions">

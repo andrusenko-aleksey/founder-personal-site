@@ -27,25 +27,22 @@ describe('Footer', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders navigation links', () => {
+  it('renders a link to every home page section', () => {
     render(<Footer />);
 
-    expect(screen.getByRole('link', { name: /about/i })).toHaveAttribute(
-      'href',
-      '/about',
-    );
-    expect(screen.getByRole('link', { name: /resume/i })).toHaveAttribute(
-      'href',
-      '/resume',
-    );
-    expect(screen.getByRole('link', { name: /projects/i })).toHaveAttribute(
-      'href',
-      '/projects',
-    );
-    expect(screen.getByRole('link', { name: /contact/i })).toHaveAttribute(
-      'href',
-      '/contact',
-    );
+    for (const [label, href] of [
+      ['About', '/#about'],
+      ['Experience', '/#experience'],
+      ['Skills', '/#skills'],
+      ['Projects', '/#projects'],
+      ['Writing', '/#writing'],
+      ['Contact', '/#contact'],
+    ]) {
+      expect(screen.getByRole('link', { name: label })).toHaveAttribute(
+        'href',
+        href,
+      );
+    }
   });
 
   it('renders contact icons section', () => {

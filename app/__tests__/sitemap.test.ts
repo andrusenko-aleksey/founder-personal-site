@@ -4,19 +4,20 @@ import { SITE_URL } from '@/lib/utils';
 import sitemap from '../sitemap';
 
 describe('sitemap', () => {
-  it('uses trailing slashes for exported page routes', () => {
+  it('lists the one-page home with a trailing slash', () => {
     const entries = sitemap();
 
-    expect(entries).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ url: `${SITE_URL}/about/` }),
-        expect.objectContaining({ url: `${SITE_URL}/resume/` }),
-        expect.objectContaining({ url: `${SITE_URL}/projects/` }),
-        expect.objectContaining({ url: `${SITE_URL}/writing/` }),
-        expect.objectContaining({ url: `${SITE_URL}/stats/` }),
-        expect.objectContaining({ url: `${SITE_URL}/contact/` }),
-      ]),
+    expect(entries[0]).toEqual(
+      expect.objectContaining({ url: `${SITE_URL}/`, priority: 1 }),
     );
+  });
+
+  it('does not list removed standalone pages', () => {
+    const urls = sitemap().map((entry) => entry.url);
+
+    for (const path of ['about', 'resume', 'projects', 'stats', 'contact']) {
+      expect(urls).not.toContain(`${SITE_URL}/${path}/`);
+    }
   });
 
   it('uses trailing slashes for post routes when posts exist', () => {

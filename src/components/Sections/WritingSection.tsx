@@ -1,24 +1,8 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
-import PageWrapper from '@/components/Template/PageWrapper';
+
 import writing from '@/data/writing';
-import { createPageMetadata } from '@/lib/metadata';
 import { getAllPosts } from '@/lib/posts';
 import { formatDate, withBasePath } from '@/lib/utils';
-
-export const metadata: Metadata = {
-  ...createPageMetadata({
-    title: 'Writing',
-    description:
-      'Research and articles on SaaS SEO, LLMO, GEO and inbound marketing by Oleksii Andrusenko.',
-    path: '/writing/',
-  }),
-  alternates: {
-    types: {
-      'application/rss+xml': '/feed.xml',
-    },
-  },
-};
 
 interface UnifiedItem {
   title: string;
@@ -42,7 +26,7 @@ function WritingItem({ item, showDate = true }: WritingItemProps) {
           {formatDate(item.date)}
         </time>
       )}
-      <h2 className="writing-title">{item.title}</h2>
+      <h3 className="writing-title">{item.title}</h3>
       <p className="writing-description">{item.description}</p>
       {item.isExternal && (
         <span className="writing-external" aria-hidden="true">
@@ -72,7 +56,7 @@ function WritingItem({ item, showDate = true }: WritingItemProps) {
   );
 }
 
-export default function WritingPage() {
+export default function WritingSection() {
   // Get internal posts from markdown files
   const internalPosts = getAllPosts();
   const internalItems: UnifiedItem[] = internalPosts.map((post) => ({
@@ -97,11 +81,11 @@ export default function WritingPage() {
   const undated = allItems.filter((item) => !item.date);
 
   return (
-    <PageWrapper>
-      <article className="writing-page">
+    <section id="writing" className="onepage-section">
+      <div className="writing-page">
         <header className="writing-header">
           <div className="writing-header-row">
-            <h1 className="page-title">Writing</h1>
+            <h2 className="page-title">Writing</h2>
             <a
               href={withBasePath('/feed.xml')}
               className="writing-rss-link"
@@ -127,7 +111,7 @@ export default function WritingPage() {
             </>
           )}
         </div>
-      </article>
-    </PageWrapper>
+      </div>
+    </section>
   );
 }

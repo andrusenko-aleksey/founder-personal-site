@@ -68,7 +68,7 @@ export async function GET() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oleksii Andrusenko - Writing</title>
-    <link>${SITE_URL}/writing/</link>
+    <link>${SITE_URL}/#writing</link>
     <description>Research and articles on SaaS SEO, LLMO and inbound marketing by Oleksii Andrusenko.</description>
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
