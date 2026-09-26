@@ -13,12 +13,12 @@ export default function ResumeSection() {
         <header className="resume-header">
           <h2 className="resume-title">Resume</h2>
           <p className="resume-summary">
-            Founder &amp; CEO with 16+ years in SEO and growth marketing. I run
-            GrowPad, an inbound growth agency that helps SaaS and B2B tech
-            companies win visibility across Google and AI search. Before that I
-            spent more than seven years at Livepage, first as Head of SEO and
-            then as CEO. I&apos;ve led two marketing agencies and helped 50+
-            tech and SaaS teams grow through organic search.
+            16+ years in SEO and inbound marketing, from my first SEO job in
+            2010 to founding GrowPad in 2020. Along the way I spent more than
+            seven years at Livepage, rising from SEO specialist to Head of SEO,
+            Head of Marketing and Acting CEO. Today my team of 15+ helps SaaS
+            and B2B tech companies turn Google and AI search into qualified
+            pipeline.
           </p>
         </header>
 

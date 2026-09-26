@@ -19,15 +19,16 @@ export default function Hero() {
           <a href="https://growpad.pro" className="hero-highlight">
             GrowPad
           </a>
-          , an SEO and AI-visibility agency for SaaS and B2B tech companies.
+          . I help SaaS and IT companies become the first click when buyers
+          search for a vendor, on Google or in ChatGPT.
           <br />
-          16+ years turning organic search and LLMs into predictable pipeline.
+          SEO and LLMO measured in pipeline, not impressions.
         </p>
 
         <div className="hero-chips">
-          <span className="hero-chip">16+ years in SEO</span>
-          <span className="hero-chip">50+ SaaS &amp; tech teams grown</span>
-          <span className="hero-chip">37+ five-star Clutch reviews</span>
+          <span className="hero-chip">16+ years in inbound marketing</span>
+          <span className="hero-chip">50+ SaaS &amp; tech companies</span>
+          <span className="hero-chip">30+ five-star Clutch reviews</span>
         </div>
 
         <nav className="hero-cta" aria-label="Jump to section">

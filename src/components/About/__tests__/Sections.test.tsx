@@ -42,7 +42,7 @@ Hello from the intro.
 
 Lead paragraph.
 
-# Mission
+# Results
 
 Help founders grow.
 
@@ -111,10 +111,10 @@ Lead paragraph.
       <AboutContent markdown={aboutMarkdown} />,
     );
 
-    expect(html).toContain('href="#my-story"');
-    expect(html).toContain('id="my-story"');
-    expect(html).toContain('href="#what-i-work-on"');
-    expect(html).toContain('id="what-i-work-on"');
+    expect(html).toContain('href="#my-journey"');
+    expect(html).toContain('id="my-journey"');
+    expect(html).toContain('href="#today"');
+    expect(html).toContain('id="today"');
   });
 
   it('supports same-page hash navigation from section links', async () => {
@@ -124,30 +124,30 @@ Lead paragraph.
 
     const nav = screen.getByRole('navigation', { name: 'About sections' });
     const navLink = within(nav).getByRole('link', {
-      name: 'What I Work On',
+      name: 'Today',
     });
 
     navLink.click();
 
     await waitFor(() => {
-      expect(window.location.hash).toBe('#what-i-work-on');
+      expect(window.location.hash).toBe('#today');
     });
     expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'What I Work On',
+      'Today',
     );
 
-    const heading = screen.getByRole('heading', { name: 'Mission' });
+    const heading = screen.getByRole('heading', { name: 'Results' });
     const permalink = within(heading).getByRole('link', {
-      name: 'Mission',
+      name: 'Results',
     });
 
     permalink.click();
 
     await waitFor(() => {
-      expect(window.location.hash).toBe('#mission');
+      expect(window.location.hash).toBe('#results');
     });
     expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'Mission',
+      'Results',
     );
   });
 });

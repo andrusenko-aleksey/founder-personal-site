@@ -14,25 +14,28 @@ describe('about data', () => {
     expect(aboutMarkdown).toContain('[GrowPad](https://growpad.pro)');
   });
 
-  it('contains the story section', () => {
-    expect(aboutMarkdown).toContain('# My Story');
+  it('contains the journey section in chronological order', () => {
+    expect(aboutMarkdown).toContain('# My Journey');
     expect(aboutMarkdown).toContain('[Livepage](https://livepage.net)');
+    expect(aboutMarkdown.indexOf('**2010:**')).toBeLessThan(
+      aboutMarkdown.indexOf('**2020:**'),
+    );
+  });
+
+  it('contains the today section', () => {
+    expect(aboutMarkdown).toContain('# Today');
+    expect(aboutMarkdown).toContain('15+ inbound marketing specialists');
     expect(aboutMarkdown).toContain('Alicante, Spain');
   });
 
-  it('contains the what I work on section', () => {
-    expect(aboutMarkdown).toContain('# What I Work On');
-    expect(aboutMarkdown).toContain('AI search visibility');
+  it('contains the results section', () => {
+    expect(aboutMarkdown).toContain('# Results');
+    expect(aboutMarkdown).toContain('30+ verified five-star reviews');
   });
 
-  it('contains the how we work section', () => {
-    expect(aboutMarkdown).toContain('# How We Work');
-    expect(aboutMarkdown).toContain('qualified pipeline');
-  });
-
-  it('contains the mission section', () => {
-    expect(aboutMarkdown).toContain('# Mission');
-    expect(aboutMarkdown).toContain('10,000 Ukrainian IT and SaaS founders');
+  it('contains the outside work section', () => {
+    expect(aboutMarkdown).toContain('# Outside Work');
+    expect(aboutMarkdown).toContain('Bosphorus');
   });
 
   it('contains the elsewhere section', () => {
@@ -48,10 +51,10 @@ describe('about data', () => {
 
     expect(headings).toEqual([
       'Intro',
-      'My Story',
-      'What I Work On',
-      'How We Work',
-      'Mission',
+      'My Journey',
+      'Today',
+      'Results',
+      'Outside Work',
       'Elsewhere',
     ]);
   });

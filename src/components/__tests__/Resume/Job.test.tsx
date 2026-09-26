@@ -21,6 +21,16 @@ describe('Job', () => {
     expect(link).toHaveAttribute('href', 'https://acme.com');
   });
 
+  it('renders company name as plain text when there is no url', () => {
+    const { url: _url, ...jobWithoutUrl } = mockJob;
+    render(<Job data={jobWithoutUrl} />);
+
+    expect(screen.queryByRole('link')).toBeNull();
+    expect(screen.getByRole('heading', { level: 4 })).toHaveTextContent(
+      'Acme Corp - Senior Engineer',
+    );
+  });
+
   it('renders position title', () => {
     render(<Job data={mockJob} />);
 
