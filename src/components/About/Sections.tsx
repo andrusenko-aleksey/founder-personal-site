@@ -19,8 +19,7 @@ interface ParsedAboutSection {
 }
 
 const sectionVariants: Record<string, string> = {
-  'What I Work On': 'about-section--compact',
-  Mission: 'about-section--compact',
+  Results: 'about-section--compact',
   Elsewhere: 'about-section--links',
 };
 

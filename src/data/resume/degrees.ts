@@ -7,16 +7,10 @@ export interface Degree {
 
 const degrees: Degree[] = [
   {
-    school: 'Kyiv Polytechnic Institute',
-    degree: 'M.S. Information Technologies and Computer Engineering',
-    link: 'https://kpi.ua',
-    year: 2014,
-  },
-  {
-    school: 'Kyiv Polytechnic Institute',
-    degree: 'B.S. Computer Science',
-    link: 'https://kpi.ua',
-    year: 2012,
+    school: 'Dnipropetrovsk National University',
+    degree: 'Master’s degree, Physics and Electronics (microelectronics)',
+    link: 'https://www.dnu.dp.ua',
+    year: 2009,
   },
 ];
 

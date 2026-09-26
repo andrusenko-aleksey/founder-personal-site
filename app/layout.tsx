@@ -27,7 +27,7 @@ const raleway = Raleway({
 });
 
 const siteDescription =
-  'Founder & CEO of GrowPad, an SEO and AI-visibility agency for SaaS and B2B tech. 16+ years in SEO, content and LLMO, helping 50+ tech teams grow organic pipeline.';
+  'Founder & CEO of GrowPad. 16+ years in SEO and inbound marketing, helping 50+ SaaS and tech companies win the first click on Google and in ChatGPT.';
 
 export const metadata: Metadata = {
   title: {

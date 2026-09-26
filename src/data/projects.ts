@@ -16,7 +16,7 @@ const data: Project[] = [
     link: 'https://growpad.pro',
     image: '/images/projects/growpad.png',
     date: '2020-09-01',
-    desc: 'The agency I founded in 2020. We help 20+ active SaaS and tech clients turn organic search and AI answers into qualified pipeline, backed by 37+ five-star Clutch reviews.',
+    desc: 'The agency I founded in 2020. A team of 15+ specialists helps 20+ active SaaS and tech clients turn organic search and AI answers into qualified pipeline, backed by 30+ five-star Clutch reviews.',
     tech: ['SaaS SEO', 'LLMO', 'GEO / AEO', 'Content', 'Link Building'],
     featured: true,
   },

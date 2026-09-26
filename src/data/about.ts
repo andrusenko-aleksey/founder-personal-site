@@ -1,32 +1,37 @@
 export const aboutMarkdown = `# Intro
 
-I'm Oleksii Andrusenko, founder and CEO of [GrowPad](https://growpad.pro), an inbound growth agency for SaaS and B2B tech companies scaling across EU and US markets.
+I'm Oleksii Andrusenko, founder and CEO of [GrowPad](https://growpad.pro). My team and I make sure that when someone searches for a SaaS or IT vendor, on Google or in ChatGPT, our clients are the first result they click. We do it with SEO and LLMO frameworks we've refined over years of client work.
 
-For more than 16 years I've worked in SEO and growth marketing. Today my team builds and runs SEO and AI-search strategies that help software brands get found and cited wherever buyers search, whether that's Google or AI assistants like ChatGPT, Perplexity and Gemini. I personally lead client strategy and business development.
+We judge our work by revenue signals: qualified MQLs and SQLs, trials and demo requests. A chart showing organic impressions doubling doesn't count if the pipeline stays flat.
 
-# My Story
+# My Journey
 
-- I started my career at a garage-based startup in Dnipro, working for an Austrian founder who sold Forex trading systems. That's where I got my first real taste of SEO and inbound marketing, and where I learned English on the fly.
-- In 2013 I joined [Livepage](https://livepage.net), a digital marketing agency in Dnipro, as Head of the SEO Department.
-- At the end of 2018 I became CEO of Livepage, where we grew 70+ client businesses at the same time across B2B and e-commerce.
-- In 2020 I left the CEO role at Livepage and registered the GrowPad domain.
-- Since then, GrowPad has helped 50+ SaaS and B2B tech companies turn organic search into predictable pipeline. We work with 20+ active clients and have 37+ five-star reviews on [Clutch](https://clutch.co/profile/growpad).
-- In April 2026 we opened GrowPad's European headquarters in Alicante, Spain.
+- **2010:** Got my first SEO job at a garage-based startup in Dnipro.
+- **2013:** Joined the [Livepage](https://livepage.net) agency as a junior SEO specialist.
+- **2014:** Found my niche in tech clients: IT outsourcing firms, SaaS and product companies.
+- **2018:** Spoke at Outsource People, Ukraine's largest IT outsourcing conference.
+- **2019:** Mentored at Dnipro IT Biz School and visited Google's HQ in Dublin.
+- **2014–2020:** Moved up at Livepage from team lead to CEO, growing the client base to 70+ B2B companies.
+- **2020:** Started GrowPad on a single conviction: focusing on one niche beats spreading thin.
 
-# What I Work On
+# Today
 
-- **SaaS and B2B tech SEO:** technical audits, content architecture and link building.
-- **AI search visibility (LLMO, GEO, AEO):** getting brands cited in Google AI Overviews, ChatGPT and Perplexity.
-- **AI-optimized content:** content built to rank and to be quoted by LLMs.
-- **Research:** GrowPad's [Global LLMO & Inbound Marketing Research 2026](https://growpad.pro/inbound-marketing-report-2026/), based on a survey of 110 IT and SaaS companies.
+I lead a team of 15+ inbound marketing specialists working with 20+ active SaaS and B2B tech clients each month. GrowPad is recognized as a Clutch Top Company in SEO, content marketing, link building and inbound marketing, and in April 2026 we opened our European headquarters in Alicante, Spain.
 
-# How We Work
+# Results
 
-GrowPad was founded on the belief that one niche done right beats five done halfway. We stay focused on SaaS and tech, stay disciplined about the end result, and measure success in qualified pipeline and new MRR rather than vanity traffic.
+- 16+ years in inbound marketing
+- 50+ tech and SaaS companies worked with
+- 30+ verified five-star reviews on [Clutch](https://clutch.co/profile/growpad)
+- 3× more SQLs for businesses that had stalled
+- 5× organic traffic growth for our top clients
+- Zero paid ads spent on winning our own clients
 
-# Mission
+# Outside Work
 
-My mission is to help 10,000 Ukrainian IT and SaaS founders grow on the world's stage.
+I swim open water: three Bosphorus Cross-Continental races and two OceanMan events so far. I love cycling, and I'm a husband and a father.
+
+I'm always happy to meet like-minded people, so feel free to reach out.
 
 # Elsewhere
 

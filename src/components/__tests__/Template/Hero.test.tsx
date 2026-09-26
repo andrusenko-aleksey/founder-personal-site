@@ -29,10 +29,12 @@ describe('Hero', () => {
   it('displays hero chips for credentials', () => {
     render(<Hero />);
 
-    expect(screen.getByText('16+ years in SEO')).toBeInTheDocument();
-    expect(screen.getByText('50+ SaaS & tech teams grown')).toBeInTheDocument();
     expect(
-      screen.getByText('37+ five-star Clutch reviews'),
+      screen.getByText('16+ years in inbound marketing'),
+    ).toBeInTheDocument();
+    expect(screen.getByText('50+ SaaS & tech companies')).toBeInTheDocument();
+    expect(
+      screen.getByText('30+ five-star Clutch reviews'),
     ).toBeInTheDocument();
     expect(document.querySelectorAll('.hero-chip')).toHaveLength(3);
   });

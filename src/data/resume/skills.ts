@@ -97,6 +97,26 @@ const skills: Skill[] = [
     competency: 4,
     category: ['Leadership'],
   },
+  {
+    title: 'AI Citation Monitoring',
+    competency: 4,
+    category: ['AI Search'],
+  },
+  {
+    title: 'Team Management',
+    competency: 5,
+    category: ['Leadership'],
+  },
+  {
+    title: 'Public Speaking',
+    competency: 4,
+    category: ['Leadership'],
+  },
+  {
+    title: 'Mentoring',
+    competency: 4,
+    category: ['Leadership'],
+  },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
 /**
