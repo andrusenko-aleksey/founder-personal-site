@@ -32,6 +32,7 @@ describe('createHeadingId', () => {
         createHeadingId(title),
       ]),
     ).toEqual([
+      ['My Story', 'my-story'],
       ['My Journey', 'my-journey'],
       ['Today', 'today'],
       ['Results', 'results'],
