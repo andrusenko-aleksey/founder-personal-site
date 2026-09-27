@@ -15,6 +15,7 @@ We judge our work by revenue signals: qualified MQLs and SQLs, trials and demo r
 - **2019:** Mentored at Dnipro IT Biz School and visited Google's HQ in Dublin.
 - **2014–2020:** Moved up at Livepage from team lead to CEO, growing the client base to 70+ B2B companies.
 - **2020:** Started GrowPad on a single conviction: focusing on one niche beats spreading thin.
+- **2025:** Published my book, *Inbound Marketing for IT Service and SaaS Companies* (in Ukrainian).
 
 # Today
 

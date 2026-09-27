@@ -110,6 +110,12 @@ describe('PersonSchema', () => {
     );
   });
 
+  it('links the book as a work example', () => {
+    const person = readSchema().mainEntity;
+
+    expect(person.workExample).toEqual({ '@id': `${SITE_URL}/#book` });
+  });
+
   it('lists skills in knowsAbout', () => {
     const person = readSchema().mainEntity;
 

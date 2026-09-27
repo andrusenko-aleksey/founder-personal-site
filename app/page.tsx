@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import { PersonSchema } from '@/components/Schema';
 import AboutSection from '@/components/Sections/AboutSection';
+import BookSection from '@/components/Sections/BookSection';
 import ContactSection from '@/components/Sections/ContactSection';
 import ProjectsSection from '@/components/Sections/ProjectsSection';
 import ResumeSection from '@/components/Sections/ResumeSection';
@@ -25,6 +26,7 @@ export default function HomePage() {
       <PersonSchema />
       <Hero />
       <AboutSection />
+      <BookSection />
       <ResumeSection />
       <ProjectsSection />
       <WritingSection />

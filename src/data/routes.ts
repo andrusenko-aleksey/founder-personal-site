@@ -13,6 +13,7 @@ const routes: Route[] = [
     path: '/',
   },
   { label: 'About', path: '/#about', sectionId: 'about' },
+  { label: 'Book', path: '/#book', sectionId: 'book' },
   { label: 'Experience', path: '/#experience', sectionId: 'experience' },
   { label: 'Skills', path: '/#skills', sectionId: 'skills' },
   { label: 'Projects', path: '/#projects', sectionId: 'projects' },
