@@ -77,6 +77,7 @@ export default function PersonSchema() {
       recognizedBy: organization(degree.school, degree.link),
     })),
     knowsAbout: skills.map((skill) => skill.title),
+    workExample: { '@id': `${SITE_URL}/#book` },
   };
 
   const profilePage = {

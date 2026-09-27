@@ -47,6 +47,7 @@ describe('Hero', () => {
     expect(aboutButton).toHaveClass('button-primary');
 
     for (const [label, href] of [
+      ['Book', '#book'],
       ['Experience', '#experience'],
       ['Skills', '#skills'],
       ['Projects', '#projects'],

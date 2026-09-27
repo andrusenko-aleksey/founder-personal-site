@@ -53,6 +53,7 @@ describe('Navigation', () => {
 
     for (const [label, href] of [
       ['About', '/#about'],
+      ['Book', '/#book'],
       ['Experience', '/#experience'],
       ['Skills', '/#skills'],
       ['Projects', '/#projects'],

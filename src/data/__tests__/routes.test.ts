@@ -39,6 +39,7 @@ describe('routes', () => {
     expect(paths).toEqual([
       '/',
       '/#about',
+      '/#book',
       '/#experience',
       '/#skills',
       '/#projects',
