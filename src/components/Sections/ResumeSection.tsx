@@ -16,9 +16,9 @@ export default function ResumeSection() {
             16+ years in SEO and inbound marketing, from my first SEO job in
             2010 to founding GrowPad in 2020. Along the way I spent more than
             seven years at Livepage, rising from SEO specialist to Head of SEO,
-            Head of Marketing and Acting CEO. Today my team of 15+ helps SaaS
-            and B2B tech companies turn Google and AI search into qualified
-            pipeline.
+            Head of Marketing and Acting CEO. Today I manage a team of 10 that
+            helps SaaS and B2B tech companies turn Google and AI search into
+            qualified pipeline.
           </p>
         </header>
 

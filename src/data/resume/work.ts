@@ -23,7 +23,7 @@ const work: Position[] = [
     measure success in MQLs, SQLs, trials and demos rather than impressions. Remote team, based
     in Spain.`,
     highlights: [
-      'Grew the agency to a team of 15+ specialists who work with 20+ active clients every month.',
+      'Manage a team of 10 specialists who work with 20+ active clients every month.',
       'Designed the SEO and LLMO frameworks we use to map content to each stage of the funnel.',
       'Built monitoring for AI citations, tracking how often clients appear in ChatGPT and Perplexity answers.',
       'Run strategic audits, set team direction and support clients through implementation.',
