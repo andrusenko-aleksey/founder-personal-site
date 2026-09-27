@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Raleway, Source_Sans_3 } from 'next/font/google';
+import localFont from 'next/font/local';
 import Script from 'next/script';
 
 import GoogleAnalytics from '@/components/Template/GoogleAnalytics';
@@ -8,22 +8,27 @@ import ScrollToTop from '@/components/Template/ScrollToTop';
 import { AUTHOR_NAME, SITE_URL, TWITTER_HANDLE } from '@/lib/utils';
 import './tailwind.css';
 
-const sourceSans = Source_Sans_3({
-  weight: ['400', '700'],
-  subsets: ['latin'],
+// Self-hosted (Fontsource, OFL) so builds never depend on fetching Google Fonts.
+const sourceSans = localFont({
+  src: [
+    { path: './fonts/source-sans-3-latin-400-normal.woff2', weight: '400' },
+    { path: './fonts/source-sans-3-latin-700-normal.woff2', weight: '700' },
+  ],
   variable: '--font-source-sans',
   display: 'swap',
   preload: true,
-  adjustFontFallback: true,
+  fallback: ['system-ui', 'sans-serif'],
 });
 
-const raleway = Raleway({
-  weight: ['400', '800'],
-  subsets: ['latin'],
+const raleway = localFont({
+  src: [
+    { path: './fonts/raleway-latin-400-normal.woff2', weight: '400' },
+    { path: './fonts/raleway-latin-800-normal.woff2', weight: '800' },
+  ],
   variable: '--font-raleway',
   display: 'swap',
   preload: true,
-  adjustFontFallback: true,
+  fallback: ['system-ui', 'sans-serif'],
 });
 
 const siteDescription =

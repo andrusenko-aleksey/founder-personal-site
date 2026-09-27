@@ -71,6 +71,7 @@ Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Biome ·
 ## Key Patterns
 
 - **Theming**: `data-theme` attribute on `<html>`, persisted to `window.localStorage` in client code/tests to avoid Node runtime globals leaking into browser-only paths
+- **Fonts**: Raleway and Source Sans 3 are self-hosted in `app/fonts/` (latin subset, OFL) and loaded with `next/font/local`; don't switch back to `next/font/google`, whose build-time download made CI builds fail intermittently
 - **Static export**: `output: 'export'` for GitHub Pages—no server features
 - **Canonical/export URLs**: When generating absolute URLs for metadata, RSS, sitemap, or schema, match `trailingSlash: true` output (`/about/`, `/writing/post-slug/`) instead of non-canonical no-slash variants; file-like routes such as `/feed.xml` and `/sitemap.xml` stay file-like
 - **One-page layout**: `app/page.tsx` stacks the hero and the section components in `src/components/Sections/` (About, Resume, Projects, Writing, Contact). Section ids and nav labels live in `src/data/routes.ts`; header, footer, mobile menu and hero jump buttons all read from `sectionRoutes`, and `useActiveSection` highlights the section in view. Add a section by creating its component, giving it `id` + `className="onepage-section"`, and adding a route entry. Only `/writing/[slug]` posts remain as separate pages
