@@ -24,7 +24,7 @@ describe('about data', () => {
 
   it('contains the today section', () => {
     expect(aboutMarkdown).toContain('# Today');
-    expect(aboutMarkdown).toContain('15+ inbound marketing specialists');
+    expect(aboutMarkdown).toContain('team of 10 inbound marketing specialists');
     expect(aboutMarkdown).toContain('Alicante, Spain');
   });
 

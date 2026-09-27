@@ -1,11 +1,13 @@
 export const aboutMarkdown = `# Intro
 
-I'm Oleksii Andrusenko, founder and CEO of [GrowPad](https://growpad.pro). My team and I make sure that when someone searches for a SaaS or IT vendor, on Google or in ChatGPT, our clients are the first result they click. We do it with SEO and LLMO frameworks we've refined over years of client work.
+I'm Oleksii Andrusenko, founder and CEO of [GrowPad](https://growpad.pro). I was born on 19 June 1987 in Dnipro, Ukraine. My team and I make sure that when someone searches for a SaaS or IT vendor, on Google or in ChatGPT, our clients are the first result they click. We do it with SEO and LLMO frameworks we've refined over years of client work.
 
 We judge our work by revenue signals: qualified MQLs and SQLs, trials and demo requests. A chart showing organic impressions doubling doesn't count if the pipeline stays flat.
 
 # My Journey
 
+- **1987:** Born in Dnipro, Ukraine.
+- **2004–2009:** Studied physics and microelectronics at the Faculty of Physics, Electronics and Computer Systems, Dnipro National University, graduating with a master's degree.
 - **2010:** Got my first SEO job at a garage-based startup in Dnipro.
 - **2013:** Joined the [Livepage](https://livepage.net) agency as a junior SEO specialist.
 - **2014:** Found my niche in tech clients: IT outsourcing firms, SaaS and product companies.
@@ -16,7 +18,7 @@ We judge our work by revenue signals: qualified MQLs and SQLs, trials and demo r
 
 # Today
 
-I lead a team of 15+ inbound marketing specialists working with 20+ active SaaS and B2B tech clients each month. GrowPad is recognized as a Clutch Top Company in SEO, content marketing, link building and inbound marketing, and in April 2026 we opened our European headquarters in Alicante, Spain.
+I manage a team of 10 inbound marketing specialists working with 20+ active SaaS and B2B tech clients each month. GrowPad is recognized as a Clutch Top Company in SEO, content marketing, link building and inbound marketing, and in April 2026 we opened our European headquarters in Alicante, Spain.
 
 # Results
 

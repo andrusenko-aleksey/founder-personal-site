@@ -88,4 +88,31 @@ describe('Degree', () => {
     const article = document.querySelector('article.degree-container');
     expect(article).toBeInTheDocument();
   });
+  it('shows faculty, former school name and study years when present', () => {
+    render(
+      <Degree
+        data={{
+          school: 'Oles Honchar Dnipro National University',
+          schoolFormerName: 'Dnipropetrovsk National University',
+          faculty: 'Faculty of Physics, Electronics and Computer Systems',
+          facultyLink: 'https://www.dnu.dp.ua/en/faculty',
+          degree: 'Master’s degree, Physics and Electronics',
+          link: 'https://www.dnu.dp.ua',
+          startYear: 2004,
+          year: 2009,
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByRole('link', {
+        name: 'Faculty of Physics, Electronics and Computer Systems',
+      }),
+    ).toHaveAttribute('href', 'https://www.dnu.dp.ua/en/faculty');
+    expect(
+      screen.getByText(/then Dnipropetrovsk National University/),
+    ).toBeInTheDocument();
+    expect(document.querySelector('time[datetime="2004"]')).toBeInTheDocument();
+    expect(document.querySelector('time[datetime="2009"]')).toBeInTheDocument();
+  });
 });
