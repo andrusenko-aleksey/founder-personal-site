@@ -34,6 +34,7 @@ I later told this story in the preface to my book: a journey from chaos to focus
 - **2013–2020:** Moved up at Livepage from SEO specialist to CEO, leading a team of 60+ people.
 - **2020:** Founded GrowPad on 8 August on a single conviction: focusing on one niche beats spreading thin.
 - **2025:** Published my book, *Inbound Marketing for IT Service and SaaS Companies* (in Ukrainian).
+- **2026:** Opened GrowPad Digital Growth SL in Alicante, Spain.
 
 # Today
 
