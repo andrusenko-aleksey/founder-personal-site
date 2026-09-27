@@ -1,10 +1,13 @@
 'use client';
 
 import Markdown from 'markdown-to-jsx';
+import type { ReactNode } from 'react';
 import { createUniqueHeadingIds } from '@/lib/anchors';
 
 interface AboutContentProps {
   markdown: string;
+  /** Rendered right after the intro, before the section nav. */
+  introAction?: ReactNode;
 }
 
 interface AboutSection {
@@ -81,7 +84,10 @@ function getSectionClassName(title: string) {
   return variant ? `about-section ${variant}` : 'about-section';
 }
 
-export default function AboutContent({ markdown }: AboutContentProps) {
+export default function AboutContent({
+  markdown,
+  introAction,
+}: AboutContentProps) {
   const { intro, sections } = splitAboutMarkdown(markdown);
 
   return (
@@ -91,6 +97,7 @@ export default function AboutContent({ markdown }: AboutContentProps) {
           <Markdown>{intro}</Markdown>
         </div>
       ) : null}
+      {introAction}
       {sections.length > 0 ? (
         <nav className="about-section-nav" aria-label="About sections">
           {sections.map((section) => (

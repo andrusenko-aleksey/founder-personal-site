@@ -17,7 +17,7 @@ const work: Position[] = [
     name: 'GrowPad',
     position: 'Founder & CEO',
     url: 'https://growpad.pro',
-    startDate: '2020-08-01',
+    startDate: '2020-08-08',
     summary: `An inbound growth agency for SaaS and B2B tech. We help clients become the first
     click when buyers look for a vendor, whether they search on Google or ask ChatGPT, and we
     measure success in MQLs, SQLs, trials and demos rather than impressions. Remote team, based

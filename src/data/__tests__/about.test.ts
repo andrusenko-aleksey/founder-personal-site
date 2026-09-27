@@ -14,6 +14,12 @@ describe('about data', () => {
     expect(aboutMarkdown).toContain('[GrowPad](https://growpad.pro)');
   });
 
+  it('contains the story section from the book preface', () => {
+    expect(aboutMarkdown).toContain('# My Story');
+    expect(aboutMarkdown).toContain('googled the word "SEO"');
+    expect(aboutMarkdown).toContain('On 8 August 2020 I founded GrowPad');
+  });
+
   it('contains the journey section in chronological order', () => {
     expect(aboutMarkdown).toContain('# My Journey');
     expect(aboutMarkdown).toContain('[Livepage](https://livepage.net)');
@@ -41,6 +47,9 @@ describe('about data', () => {
   it('contains the elsewhere section', () => {
     expect(aboutMarkdown).toContain('# Elsewhere');
     expect(aboutMarkdown).toContain('https://clutch.co/profile/growpad');
+    expect(aboutMarkdown).toContain(
+      'https://www.youtube.com/@OleksiiAndrusenko',
+    );
   });
 
   it('has sections in the expected order', () => {
@@ -51,6 +60,7 @@ describe('about data', () => {
 
     expect(headings).toEqual([
       'Intro',
+      'My Story',
       'My Journey',
       'Today',
       'Results',

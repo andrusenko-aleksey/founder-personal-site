@@ -65,7 +65,7 @@ describe('PersonSchema', () => {
     expect(roles[0]).toEqual({
       '@type': 'EmployeeRole',
       roleName: 'Founder & CEO',
-      startDate: '2020-08-01',
+      startDate: '2020-08-08',
       worksFor: {
         '@type': 'Organization',
         name: 'GrowPad',
