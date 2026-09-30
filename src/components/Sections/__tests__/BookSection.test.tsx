@@ -53,17 +53,35 @@ describe('BookSection', () => {
     }
   });
 
-  it('does not link to a download', () => {
+  it('links to Amazon to buy the book and nowhere else', () => {
     const { container } = render(<BookSection />);
 
-    expect(container.querySelector('a')).toBeNull();
+    const buy = screen.getByRole('link', { name: 'Buy on Amazon' });
+    expect(buy).toHaveAttribute('href', 'https://www.amazon.com/dp/6178648790');
+    expect(buy).toHaveAttribute('target', '_blank');
+    expect(container.querySelectorAll('a')).toHaveLength(1);
+  });
+
+  it('marks the book up as a Product with an Amazon offer', () => {
+    const { container } = render(<BookSection />);
+    const data = readBookSchema(container);
+
+    expect(data['@type']).toEqual(['Book', 'Product']);
+    expect(data.gtin13).toBe('9786178648794');
+    expect(data.offers).toEqual([
+      expect.objectContaining({
+        '@type': 'Offer',
+        url: 'https://www.amazon.com/dp/6178648790',
+        availability: 'https://schema.org/InStock',
+        seller: { '@type': 'Organization', name: 'Amazon' },
+      }),
+    ]);
   });
 
   it('emits Book structured data authored by the site owner', () => {
     const { container } = render(<BookSection />);
     const data = readBookSchema(container);
 
-    expect(data['@type']).toBe('Book');
     expect(data['@id']).toBe(`${SITE_URL}/#book`);
     expect(data.isbn).toBe('978-617-8648-79-4');
     expect(data.numberOfPages).toBe(104);

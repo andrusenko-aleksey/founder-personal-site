@@ -49,6 +49,19 @@ export default function BookSection() {
                 </div>
               ))}
             </dl>
+            <div className="book-actions">
+              {book.offers.map((offer) => (
+                <a
+                  key={offer.url}
+                  href={offer.url}
+                  className="button button-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buy on {offer.seller}
+                </a>
+              ))}
+            </div>
             <p className="book-copyright">{book.copyright}</p>
           </div>
         </div>

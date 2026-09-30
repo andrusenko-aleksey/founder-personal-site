@@ -3,6 +3,14 @@ export interface BookPart {
   chapters: string[];
 }
 
+export interface BookOffer {
+  seller: string;
+  url: string;
+  /** Leave unset until the listing price is confirmed; schema omits it then. */
+  price?: string;
+  priceCurrency?: string;
+}
+
 export interface Book {
   title: string;
   /** English rendering of the original title. */
@@ -20,6 +28,8 @@ export interface Book {
   language: string;
   languageCode: string;
   copyright: string;
+  /** Where to buy the book; no download links. */
+  offers: BookOffer[];
   parts: BookPart[];
 }
 
@@ -44,6 +54,12 @@ const book: Book = {
   language: 'Ukrainian',
   languageCode: 'uk',
   copyright: '© 2025 Oleksii Andrusenko',
+  offers: [
+    {
+      seller: 'Amazon',
+      url: 'https://www.amazon.com/dp/6178648790',
+    },
+  ],
   parts: [
     {
       title: 'The old map leads off a cliff',
