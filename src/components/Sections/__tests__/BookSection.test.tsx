@@ -45,7 +45,7 @@ describe('BookSection', () => {
       'AVELaunch Books',
       '2025',
       '104',
-      'E-book',
+      'Paperback, e-book',
       'Ukrainian',
       '978-617-8648-79-4',
     ]) {
@@ -74,8 +74,18 @@ describe('BookSection', () => {
         url: 'https://www.amazon.com/dp/6178648790',
         availability: 'https://schema.org/InStock',
         seller: { '@type': 'Organization', name: 'Amazon' },
+        price: '9.99',
+        priceCurrency: 'USD',
       }),
     ]);
+  });
+
+  it('shows the paperback price next to the buy button', () => {
+    render(<BookSection />);
+
+    expect(
+      screen.getByText('Paperback from $9.99 / €8.79'),
+    ).toBeInTheDocument();
   });
 
   it('emits Book structured data authored by the site owner', () => {
@@ -85,7 +95,7 @@ describe('BookSection', () => {
     expect(data['@id']).toBe(`${SITE_URL}/#book`);
     expect(data.isbn).toBe('978-617-8648-79-4');
     expect(data.numberOfPages).toBe(104);
-    expect(data.bookFormat).toBe('https://schema.org/EBook');
+    expect(data.bookFormat).toBe('https://schema.org/Paperback');
     expect(data.inLanguage).toBe('uk');
     expect(data.datePublished).toBe('2025');
     expect(data.author['@id']).toBe(`${SITE_URL}/#person`);

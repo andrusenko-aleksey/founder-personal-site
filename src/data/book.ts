@@ -9,6 +9,8 @@ export interface BookOffer {
   /** Leave unset until the listing price is confirmed; schema omits it then. */
   price?: string;
   priceCurrency?: string;
+  /** Price shown next to the buy button. */
+  priceLabel?: string;
 }
 
 export interface Book {
@@ -25,6 +27,8 @@ export interface Book {
   pages: number;
   isbn: string;
   format: string;
+  /** schema.org BookFormatType of the edition on sale. */
+  schemaFormat: string;
   language: string;
   languageCode: string;
   copyright: string;
@@ -50,7 +54,8 @@ const book: Book = {
   year: 2025,
   pages: 104,
   isbn: '978-617-8648-79-4',
-  format: 'E-book',
+  format: 'Paperback, e-book',
+  schemaFormat: 'https://schema.org/Paperback',
   language: 'Ukrainian',
   languageCode: 'uk',
   copyright: '© 2025 Oleksii Andrusenko',
@@ -58,6 +63,9 @@ const book: Book = {
     {
       seller: 'Amazon',
       url: 'https://www.amazon.com/dp/6178648790',
+      price: '9.99',
+      priceCurrency: 'USD',
+      priceLabel: 'Paperback from $9.99 / €8.79',
     },
   ],
   parts: [

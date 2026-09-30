@@ -34,7 +34,7 @@ export default function BookSchema() {
     sku: isbnDigits,
     brand: { '@type': 'Brand', name: book.author },
     numberOfPages: book.pages,
-    bookFormat: 'https://schema.org/EBook',
+    bookFormat: book.schemaFormat,
     inLanguage: book.languageCode,
     datePublished: String(book.year),
     copyrightYear: book.year,

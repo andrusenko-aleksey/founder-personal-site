@@ -61,6 +61,13 @@ export default function BookSection() {
                   Buy on {offer.seller}
                 </a>
               ))}
+              {book.offers.map((offer) =>
+                offer.priceLabel ? (
+                  <span key={offer.priceLabel} className="book-price">
+                    {offer.priceLabel}
+                  </span>
+                ) : null,
+              )}
             </div>
             <p className="book-copyright">{book.copyright}</p>
           </div>
